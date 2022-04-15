@@ -21,7 +21,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     }
   },
   // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
-  base: '/blog/',
+  // base: '/blog/',
   // 主题配置
   themeConfig: {
     // 导航配置
@@ -166,7 +166,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     bodyBgImg: [
       // '/img/bg.jpg',
-      '/blog/img/bg.jpeg'
+      '/img/bg.jpeg'
       // '/img/bg1.jpg'
     ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时每隔15秒换一张。
     bodyBgImgOpacity: 1.0, // body背景图透明度，选值 0.1~ 1.0, 默认0.5
@@ -196,7 +196,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 博主信息 (显示在首页侧边栏)
     blogger: {
-      avatar: '/blog/img/logo.png',
+      avatar: '/img/logo.png',
       name: 'Rustic',
       slogan: '后端界的小学生',
     },
