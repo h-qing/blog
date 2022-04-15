@@ -3,6 +3,8 @@
 
 rm -rf docs/.vuepress/dist
 
+sed -i "s#BASE='/'#BASE='/blog/'#g" docs/.vuepress/config.ts
+
 npm run build
 
 #cp Dockerfile docs/.vuepress/dist

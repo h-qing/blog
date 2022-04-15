@@ -8,7 +8,7 @@ import dayjs from 'dayjs'
 import baiduCode from './config/baiduCode' // 百度统计hm码
 import htmlModules from './config/htmlModules' // 自定义插入的html块
 
-const BASE = '/blob/'
+const BASE='/';
 
 // @ts-ignore
 export default defineConfig4CustomTheme<VdoingThemeConfig>({

@@ -3,7 +3,7 @@
 
 rm -rf docs/.vuepress/dist
 
-sed -i "s/\\/blog\\//\\//g" docs/.vuepress/config.ts
+sed -i "s#BASE='/blog/'#BASE='/'#g" docs/.vuepress/config.ts
 
 npm run build
 
