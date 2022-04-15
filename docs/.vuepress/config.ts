@@ -8,6 +8,8 @@ import dayjs from 'dayjs'
 import baiduCode from './config/baiduCode' // 百度统计hm码
 import htmlModules from './config/htmlModules' // 自定义插入的html块
 
+const BASE = '/blob/'
+
 // @ts-ignore
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
   theme: 'vdoing', // 使用npm主题包
@@ -17,11 +19,11 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     '/': {
       lang: 'zh-CN',
       title: "Rustic blog",
-      description: 'web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。',
+      description: 'huangqing的博客。',
     }
   },
   // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
-  base: '/',
+  base: BASE,
   // 主题配置
   themeConfig: {
     // 导航配置
@@ -166,7 +168,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     bodyBgImg: [
       // '/img/bg.jpg',
-      '/img/bg.jpeg'
+      BASE + 'img/bg.jpeg'
       // '/img/bg1.jpg'
     ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时每隔15秒换一张。
     bodyBgImgOpacity: 1.0, // body背景图透明度，选值 0.1~ 1.0, 默认0.5
@@ -196,7 +198,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 博主信息 (显示在首页侧边栏)
     blogger: {
-      avatar: '/img/logo.png',
+      avatar: BASE + 'img/logo.png',
       name: 'Rustic',
       slogan: '后端界的小学生',
     },

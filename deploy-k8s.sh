@@ -13,6 +13,5 @@ git add .
 git commit -m 'deploy'git
 
 # 如果发布到 https://<USERNAME>.github.io  填写你刚刚创建的仓库地址
-git push origin master https://gitee.com/hq-study/blog.git
-# git push -f git@github.com:h-qing/blogs.git
+git push -f  https://gitee.com/hq-study/blog.git master:master
 
