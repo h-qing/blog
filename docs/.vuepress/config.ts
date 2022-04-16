@@ -40,24 +40,42 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
               { text: 'Jvm-指南', link: '/pages/java001/' },
               { text: 'Lambda&Stream-API', link: '/pages/java002/' },
               { text: 'LocalDate大法', link: '/pages/java003/' },
+              { text: 'Juc-指南', link: '/pages/java004/' },
+              { text: 'Spring-指南', link: '/pages/java005/' },
+              { text: 'Java类加载', link: '/pages/java006/' },
+              { text: 'HashMap源码分析', link: '/pages/java007/' },
+              { text: 'Mybatis 源码流程分析', link: '/pages/java008/' },
             ],
           },
           {
             text: 'Linux',
             items: [
-              { text: '《JavaScript教程》', link: '/note/javascript/' },
+              { text: 'Linux-指南', link: '/pages/linux001/' },
+              { text: 'Shell-指南', link: '/pages/linux002/' },
             ],
           },
           {
             text: 'Sql',
             items: [
-              { text: '《JavaScript教程》', link: '/note/javascript/' },
+              { text: 'Sql-指南', link: '/pages/sql001/' },
             ],
           },
           {
             text: 'DevOps',
             items: [
-              { text: '《JavaScript教程》', link: '/note/javascript/' },
+              { text: 'Docker-指南', link: '/pages/devops001/' },
+              { text: 'K8S-指南', link: '/pages/devops002/' },
+            ],
+          },
+          {
+            text: '其他',
+            items: [
+              { text: 'ES-指南', link: '/pages/ohter001/' },
+              { text: 'Git-指南', link: '/pages/ohter002/' },
+              { text: 'Redis-指南', link: '/pages/ohter003/' },
+              { text: 'Typora-指南', link: '/pages/ohter004/' },
+              { text: 'Nginx-指南', link: '/pages/ohter005/' },
+              { text: '正则表达式-指南', link: '/pages/ohter006/' },
             ],
           },
         ],
@@ -115,7 +133,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '技术文档', link: '/pages/9a7ee40fc232253e/' },
           { text: 'GitHub技巧', link: '/pages/4c778760be26d8b3/' },
           { text: 'Nodejs', link: '/pages/117708e0af7f0bd9/' },
-          { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
         ],
       },
       {
@@ -124,20 +141,16 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         items: [
           { text: '学习', link: '/pages/f2a556/' },
           { text: '面试', link: '/pages/aea6571b7a8bae86/' },
-          { text: '心情杂货', link: '/pages/2d615df9a36a98ed/' },
-          { text: '实用技巧', link: '/pages/baaa02/' },
-          { text: '友情链接', link: '/friends/' },
+          {
+            text: '收藏',
+            link: '/pages/beb6c0bd8a66cea6/',
+            // items: [
+            //   { text: '网站', link: '/pages/beb6c0bd8a66cea6/' },
+            //   { text: '资源', link: '/pages/eee83a9211a70f9d/' },
+            //   { text: 'Vue资源', link: '/pages/12df8ace52d493f6/' },
+            // ],
+          },
         ],
-      },
-      { text: '关于', link: '/about/' },
-      {
-        text: '收藏',
-        link: '/pages/beb6c0bd8a66cea6/',
-        // items: [
-        //   { text: '网站', link: '/pages/beb6c0bd8a66cea6/' },
-        //   { text: '资源', link: '/pages/eee83a9211a70f9d/' },
-        //   { text: 'Vue资源', link: '/pages/12df8ace52d493f6/' },
-        // ],
       },
       {
         text: '索引',
@@ -148,6 +161,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '归档', link: '/archives/' },
         ],
       },
+      { text: '关于', link: '/about/' },
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/logo.png', // 导航栏logo

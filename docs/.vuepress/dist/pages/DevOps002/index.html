@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>K8S-指南 | Rustic blog</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/img/favicon.ico">
+    <meta name="description" content="huangqing的博客。">
+    <meta name="keywords" content="hq-blog">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.62e1d22e.css" as="style"><link rel="preload" href="/assets/js/app.99f4e5a9.js" as="script"><link rel="preload" href="/assets/js/2.dc8d57d7.js" as="script"><link rel="preload" href="/assets/js/82.062ff1c0.js" as="script"><link rel="prefetch" href="/assets/js/10.55701e96.js"><link rel="prefetch" href="/assets/js/100.bdd4aeb7.js"><link rel="prefetch" href="/assets/js/101.ea9fa676.js"><link rel="prefetch" href="/assets/js/102.2f8cb2a4.js"><link rel="prefetch" href="/assets/js/103.00386656.js"><link rel="prefetch" href="/assets/js/104.287e69e7.js"><link rel="prefetch" href="/assets/js/105.0242ee6c.js"><link rel="prefetch" href="/assets/js/106.729d3a4d.js"><link rel="prefetch" href="/assets/js/107.933af343.js"><link rel="prefetch" href="/assets/js/108.0f78d151.js"><link rel="prefetch" href="/assets/js/109.73a6c808.js"><link rel="prefetch" href="/assets/js/11.eaed1bc6.js"><link rel="prefetch" href="/assets/js/110.8114c2ee.js"><link rel="prefetch" href="/assets/js/111.8a856cb0.js"><link rel="prefetch" href="/assets/js/112.36709af9.js"><link rel="prefetch" href="/assets/js/113.c68dccee.js"><link rel="prefetch" href="/assets/js/114.968c1bd6.js"><link rel="prefetch" href="/assets/js/115.10f892d7.js"><link rel="prefetch" href="/assets/js/116.f23cb409.js"><link rel="prefetch" href="/assets/js/117.7491c79a.js"><link rel="prefetch" href="/assets/js/118.249ba885.js"><link rel="prefetch" href="/assets/js/119.eca22a9b.js"><link rel="prefetch" href="/assets/js/12.74bd836f.js"><link rel="prefetch" href="/assets/js/120.438632d4.js"><link rel="prefetch" href="/assets/js/121.9cd8ac94.js"><link rel="prefetch" href="/assets/js/122.b7de7e82.js"><link rel="prefetch" href="/assets/js/123.02e4bd91.js"><link rel="prefetch" href="/assets/js/124.d9f212e8.js"><link rel="prefetch" href="/assets/js/125.56abb2ff.js"><link rel="prefetch" href="/assets/js/126.b2f6522c.js"><link rel="prefetch" href="/assets/js/127.a7cd2925.js"><link rel="prefetch" href="/assets/js/128.02c1ea25.js"><link rel="prefetch" href="/assets/js/129.818dbc3d.js"><link rel="prefetch" href="/assets/js/13.48b9b9ed.js"><link rel="prefetch" href="/assets/js/130.12cfdd7f.js"><link rel="prefetch" href="/assets/js/131.33a593fc.js"><link rel="prefetch" href="/assets/js/132.bf8fa374.js"><link rel="prefetch" href="/assets/js/133.627cfb0e.js"><link rel="prefetch" href="/assets/js/134.378b9393.js"><link rel="prefetch" href="/assets/js/135.1c8332c6.js"><link rel="prefetch" href="/assets/js/136.87158483.js"><link rel="prefetch" href="/assets/js/137.ccd3a269.js"><link rel="prefetch" href="/assets/js/138.bfc1d361.js"><link rel="prefetch" href="/assets/js/139.6c9f4003.js"><link rel="prefetch" href="/assets/js/14.4c4b9156.js"><link rel="prefetch" href="/assets/js/140.41f94aa7.js"><link rel="prefetch" href="/assets/js/141.4719a97a.js"><link rel="prefetch" href="/assets/js/142.f4c32f13.js"><link rel="prefetch" href="/assets/js/143.5d6fb8cc.js"><link rel="prefetch" href="/assets/js/144.002c15d8.js"><link rel="prefetch" href="/assets/js/145.53f48fbe.js"><link rel="prefetch" href="/assets/js/146.0d7e5366.js"><link rel="prefetch" href="/assets/js/147.ed16e20a.js"><link rel="prefetch" href="/assets/js/148.32c738ba.js"><link rel="prefetch" href="/assets/js/149.1d49bcf1.js"><link rel="prefetch" href="/assets/js/15.0dce9c15.js"><link rel="prefetch" href="/assets/js/150.a05942c6.js"><link rel="prefetch" href="/assets/js/151.888ddd26.js"><link rel="prefetch" href="/assets/js/152.44262fa6.js"><link rel="prefetch" href="/assets/js/153.d0dcc26b.js"><link rel="prefetch" href="/assets/js/154.c9ad92a7.js"><link rel="prefetch" href="/assets/js/155.b731ae43.js"><link rel="prefetch" href="/assets/js/156.17bd550f.js"><link rel="prefetch" href="/assets/js/157.472a361f.js"><link rel="prefetch" href="/assets/js/158.8784d7b6.js"><link rel="prefetch" href="/assets/js/159.3de97a89.js"><link rel="prefetch" href="/assets/js/16.953d99cf.js"><link rel="prefetch" href="/assets/js/160.3265442c.js"><link rel="prefetch" href="/assets/js/161.d08c56e0.js"><link rel="prefetch" href="/assets/js/162.4b335d18.js"><link rel="prefetch" href="/assets/js/163.0a38d73c.js"><link rel="prefetch" href="/assets/js/164.2ca20318.js"><link rel="prefetch" href="/assets/js/165.17ad32bc.js"><link rel="prefetch" href="/assets/js/166.bebf91e0.js"><link rel="prefetch" href="/assets/js/167.956824d4.js"><link rel="prefetch" href="/assets/js/168.2333a9a8.js"><link rel="prefetch" href="/assets/js/169.4c9e0cc6.js"><link rel="prefetch" href="/assets/js/17.d81073c1.js"><link rel="prefetch" href="/assets/js/170.04790834.js"><link rel="prefetch" href="/assets/js/171.d1813382.js"><link rel="prefetch" href="/assets/js/172.8359fda6.js"><link rel="prefetch" href="/assets/js/173.e46f918d.js"><link rel="prefetch" href="/assets/js/174.d2acdd35.js"><link rel="prefetch" href="/assets/js/175.cec7a976.js"><link rel="prefetch" href="/assets/js/176.0b21055b.js"><link rel="prefetch" href="/assets/js/177.8820e21b.js"><link rel="prefetch" href="/assets/js/178.beaa65d4.js"><link rel="prefetch" href="/assets/js/179.b41be12b.js"><link rel="prefetch" href="/assets/js/18.95a4b19a.js"><link rel="prefetch" href="/assets/js/180.995cb22e.js"><link rel="prefetch" href="/assets/js/181.60ecff26.js"><link rel="prefetch" href="/assets/js/182.e338c3fa.js"><link rel="prefetch" href="/assets/js/183.1f2c26fe.js"><link rel="prefetch" href="/assets/js/184.8de96b56.js"><link rel="prefetch" href="/assets/js/185.d98f7fae.js"><link rel="prefetch" href="/assets/js/186.f542edbb.js"><link rel="prefetch" href="/assets/js/187.551bbfc1.js"><link rel="prefetch" href="/assets/js/188.09e72fa0.js"><link rel="prefetch" href="/assets/js/189.a8e6c368.js"><link rel="prefetch" href="/assets/js/19.850735a5.js"><link rel="prefetch" href="/assets/js/190.c34b2f41.js"><link rel="prefetch" href="/assets/js/191.76c90fa4.js"><link rel="prefetch" href="/assets/js/192.f4972906.js"><link rel="prefetch" href="/assets/js/193.563c8ac1.js"><link rel="prefetch" href="/assets/js/194.ac4d2b55.js"><link rel="prefetch" href="/assets/js/195.cfc992d0.js"><link rel="prefetch" href="/assets/js/196.60f442b6.js"><link rel="prefetch" href="/assets/js/197.f6da1ede.js"><link rel="prefetch" href="/assets/js/198.c42bf466.js"><link rel="prefetch" href="/assets/js/199.91a9771a.js"><link rel="prefetch" href="/assets/js/20.69d01909.js"><link rel="prefetch" href="/assets/js/200.359bc429.js"><link rel="prefetch" href="/assets/js/201.bcf1364f.js"><link rel="prefetch" href="/assets/js/202.e3012575.js"><link rel="prefetch" href="/assets/js/203.17116c2e.js"><link rel="prefetch" href="/assets/js/204.1c8958ca.js"><link rel="prefetch" href="/assets/js/205.fd6fb052.js"><link rel="prefetch" href="/assets/js/206.9ae4058e.js"><link rel="prefetch" href="/assets/js/207.17fa0484.js"><link rel="prefetch" href="/assets/js/208.c108d18f.js"><link rel="prefetch" href="/assets/js/209.5e0260a8.js"><link rel="prefetch" href="/assets/js/21.a8609156.js"><link rel="prefetch" href="/assets/js/210.66029fa9.js"><link rel="prefetch" href="/assets/js/211.12d763cb.js"><link rel="prefetch" href="/assets/js/212.2f9eb807.js"><link rel="prefetch" href="/assets/js/213.5e136ff8.js"><link rel="prefetch" href="/assets/js/214.f652cefa.js"><link rel="prefetch" href="/assets/js/215.981d2dda.js"><link rel="prefetch" href="/assets/js/216.2cad29b2.js"><link rel="prefetch" href="/assets/js/217.52011dfa.js"><link rel="prefetch" href="/assets/js/218.29eaee8b.js"><link rel="prefetch" href="/assets/js/219.7bdd25f5.js"><link rel="prefetch" href="/assets/js/22.3ffa3157.js"><link rel="prefetch" href="/assets/js/220.ffc164e2.js"><link rel="prefetch" href="/assets/js/221.d8aa5350.js"><link rel="prefetch" href="/assets/js/222.7a7b5bff.js"><link rel="prefetch" href="/assets/js/223.33a5e7a2.js"><link rel="prefetch" href="/assets/js/224.9767883f.js"><link rel="prefetch" href="/assets/js/225.a3e30102.js"><link rel="prefetch" href="/assets/js/226.22a33df2.js"><link rel="prefetch" href="/assets/js/227.7d8d0667.js"><link rel="prefetch" href="/assets/js/228.f60eed96.js"><link rel="prefetch" href="/assets/js/229.b416f576.js"><link rel="prefetch" href="/assets/js/23.8dbba34b.js"><link rel="prefetch" href="/assets/js/230.61a18704.js"><link rel="prefetch" href="/assets/js/231.9baac05b.js"><link rel="prefetch" href="/assets/js/232.5d8baed0.js"><link rel="prefetch" href="/assets/js/233.97e784a4.js"><link rel="prefetch" href="/assets/js/234.6287f75a.js"><link rel="prefetch" href="/assets/js/235.e4591a7a.js"><link rel="prefetch" href="/assets/js/236.cbc7445a.js"><link rel="prefetch" href="/assets/js/237.05985b1e.js"><link rel="prefetch" href="/assets/js/238.c6c061c8.js"><link rel="prefetch" href="/assets/js/239.088a2bd7.js"><link rel="prefetch" href="/assets/js/24.23026ea3.js"><link rel="prefetch" href="/assets/js/240.7daa299a.js"><link rel="prefetch" href="/assets/js/241.f31e7b4a.js"><link rel="prefetch" href="/assets/js/242.f96dc7d8.js"><link rel="prefetch" href="/assets/js/243.5e0367a2.js"><link rel="prefetch" href="/assets/js/244.36064598.js"><link rel="prefetch" href="/assets/js/25.8e9fd354.js"><link rel="prefetch" href="/assets/js/26.1975fa5b.js"><link rel="prefetch" href="/assets/js/27.bdd91bcf.js"><link rel="prefetch" href="/assets/js/28.22d9d22b.js"><link rel="prefetch" href="/assets/js/29.5048d942.js"><link rel="prefetch" href="/assets/js/3.032df654.js"><link rel="prefetch" href="/assets/js/30.63202d7f.js"><link rel="prefetch" href="/assets/js/31.82e64ea6.js"><link rel="prefetch" href="/assets/js/32.9cccf2ce.js"><link rel="prefetch" href="/assets/js/33.e5f29925.js"><link rel="prefetch" href="/assets/js/34.b3d5c5ba.js"><link rel="prefetch" href="/assets/js/35.fbd1a019.js"><link rel="prefetch" href="/assets/js/36.de40bea1.js"><link rel="prefetch" href="/assets/js/37.f0b20d58.js"><link rel="prefetch" href="/assets/js/38.09fd6028.js"><link rel="prefetch" href="/assets/js/39.dde5fc45.js"><link rel="prefetch" href="/assets/js/4.71a40d6f.js"><link rel="prefetch" href="/assets/js/40.e7f20ba1.js"><link rel="prefetch" href="/assets/js/41.04b6cb4b.js"><link rel="prefetch" href="/assets/js/42.b64646ce.js"><link rel="prefetch" href="/assets/js/43.cc41cc63.js"><link rel="prefetch" href="/assets/js/44.e22d24c1.js"><link rel="prefetch" href="/assets/js/45.065bf689.js"><link rel="prefetch" href="/assets/js/46.c332972d.js"><link rel="prefetch" href="/assets/js/47.efa4b6af.js"><link rel="prefetch" href="/assets/js/48.51d65317.js"><link rel="prefetch" href="/assets/js/49.53dbe8f3.js"><link rel="prefetch" href="/assets/js/5.e54f04ed.js"><link rel="prefetch" href="/assets/js/50.1f95f704.js"><link rel="prefetch" href="/assets/js/51.e0cece10.js"><link rel="prefetch" href="/assets/js/52.6b2159a3.js"><link rel="prefetch" href="/assets/js/53.5a0b4740.js"><link rel="prefetch" href="/assets/js/54.c1abc159.js"><link rel="prefetch" href="/assets/js/55.f03b2d39.js"><link rel="prefetch" href="/assets/js/56.3268317d.js"><link rel="prefetch" href="/assets/js/57.a18d19eb.js"><link rel="prefetch" href="/assets/js/58.0da4e1cb.js"><link rel="prefetch" href="/assets/js/59.058e7644.js"><link rel="prefetch" href="/assets/js/6.bcc6cd47.js"><link rel="prefetch" href="/assets/js/60.7e9ecf67.js"><link rel="prefetch" href="/assets/js/61.afa88cb7.js"><link rel="prefetch" href="/assets/js/62.f60d3ba4.js"><link rel="prefetch" href="/assets/js/63.802b635e.js"><link rel="prefetch" href="/assets/js/64.ad823a1b.js"><link rel="prefetch" href="/assets/js/65.4a37a710.js"><link rel="prefetch" href="/assets/js/66.c2ed7f14.js"><link rel="prefetch" href="/assets/js/67.b6f924ce.js"><link rel="prefetch" href="/assets/js/68.cafa2766.js"><link rel="prefetch" href="/assets/js/69.d1bfaa13.js"><link rel="prefetch" href="/assets/js/7.d3a44adf.js"><link rel="prefetch" href="/assets/js/70.9c2b807f.js"><link rel="prefetch" href="/assets/js/71.42326bdc.js"><link rel="prefetch" href="/assets/js/72.d307b6b2.js"><link rel="prefetch" href="/assets/js/73.0f11df77.js"><link rel="prefetch" href="/assets/js/74.775f2e9e.js"><link rel="prefetch" href="/assets/js/75.31586ccf.js"><link rel="prefetch" href="/assets/js/76.ee7d115d.js"><link rel="prefetch" href="/assets/js/77.35067811.js"><link rel="prefetch" href="/assets/js/78.7de5e921.js"><link rel="prefetch" href="/assets/js/79.a3e2a211.js"><link rel="prefetch" href="/assets/js/8.e6faa718.js"><link rel="prefetch" href="/assets/js/80.d0139f07.js"><link rel="prefetch" href="/assets/js/81.709414d7.js"><link rel="prefetch" href="/assets/js/83.4225460d.js"><link rel="prefetch" href="/assets/js/84.9d2ff71d.js"><link rel="prefetch" href="/assets/js/85.1447e626.js"><link rel="prefetch" href="/assets/js/86.9c452566.js"><link rel="prefetch" href="/assets/js/87.36054cb5.js"><link rel="prefetch" href="/assets/js/88.89788742.js"><link rel="prefetch" href="/assets/js/89.551a6c09.js"><link rel="prefetch" href="/assets/js/9.26dd0cfa.js"><link rel="prefetch" href="/assets/js/90.f0287681.js"><link rel="prefetch" href="/assets/js/91.b5266f93.js"><link rel="prefetch" href="/assets/js/92.a33f64f7.js"><link rel="prefetch" href="/assets/js/93.d0441a28.js"><link rel="prefetch" href="/assets/js/94.9356021a.js"><link rel="prefetch" href="/assets/js/95.2afd5717.js"><link rel="prefetch" href="/assets/js/96.e50112ce.js"><link rel="prefetch" href="/assets/js/97.75a7ddba.js"><link rel="prefetch" href="/assets/js/98.192dfbaf.js"><link rel="prefetch" href="/assets/js/99.d1fc9074.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.62e1d22e.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="Rustic blog" class="logo"> <span class="site-name can-hide">Rustic blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><a href="/server/" class="link-title">后端</a> <span class="title" style="display:none;">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Java</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/java001/" class="nav-link">Jvm-指南</a></li><li class="dropdown-subitem"><a href="/pages/java002/" class="nav-link">Lambda&amp;Stream-API</a></li><li class="dropdown-subitem"><a href="/pages/java003/" class="nav-link">LocalDate大法</a></li><li class="dropdown-subitem"><a href="/pages/java004/" class="nav-link">Juc-指南</a></li><li class="dropdown-subitem"><a href="/pages/java005/" class="nav-link">Spring-指南</a></li><li class="dropdown-subitem"><a href="/pages/java006/" class="nav-link">Java类加载</a></li><li class="dropdown-subitem"><a href="/pages/java007/" class="nav-link">HashMap源码分析</a></li><li class="dropdown-subitem"><a href="/pages/java008/" class="nav-link">Mybatis 源码流程分析</a></li></ul></li><li class="dropdown-item"><h4>Linux</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/linux001/" class="nav-link">Linux-指南</a></li><li class="dropdown-subitem"><a href="/pages/linux002/" class="nav-link">Shell-指南</a></li></ul></li><li class="dropdown-item"><h4>Sql</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/sql001/" class="nav-link">Sql-指南</a></li></ul></li><li class="dropdown-item"><h4>DevOps</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/devops001/" class="nav-link">Docker-指南</a></li><li class="dropdown-subitem"><a href="/pages/devops002/" class="nav-link">K8S-指南</a></li></ul></li><li class="dropdown-item"><h4>其他</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/ohter001/" class="nav-link">ES-指南</a></li><li class="dropdown-subitem"><a href="/pages/ohter002/" class="nav-link">Git-指南</a></li><li class="dropdown-subitem"><a href="/pages/ohter003/" class="nav-link">Redis-指南</a></li><li class="dropdown-subitem"><a href="/pages/ohter004/" class="nav-link">Typora-指南</a></li><li class="dropdown-subitem"><a href="/pages/ohter005/" class="nav-link">Nginx-指南</a></li><li class="dropdown-subitem"><a href="/pages/ohter006/" class="nav-link">正则表达式-指南</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>页面</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/8309a5b876fc95e3/" class="nav-link">HTML</a></li><li class="dropdown-subitem"><a href="/pages/0a83b083bdf257cb/" class="nav-link">CSS</a></li></ul></li><li class="dropdown-item"><h4>前端文章</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/8143cc480faf9a11/" class="nav-link">JavaScript</a></li></ul></li><li class="dropdown-item"><h4>学习笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/note/javascript/" class="nav-link">《JavaScript教程》</a></li><li class="dropdown-subitem"><a href="/note/js/" class="nav-link">《JavaScript高级程序设计》</a></li><li class="dropdown-subitem"><a href="/note/es6/" class="nav-link">《ES6 教程》</a></li><li class="dropdown-subitem"><a href="/note/vue/" class="nav-link">《Vue》</a></li><li class="dropdown-subitem"><a href="/note/react/" class="nav-link">《React》</a></li><li class="dropdown-subitem"><a href="/note/typescript-axios/" class="nav-link">《TypeScript 从零实现 axios》</a></li><li class="dropdown-subitem"><a href="/note/git/" class="nav-link">《Git》</a></li><li class="dropdown-subitem"><a href="/pages/51afd6/" class="nav-link">TypeScript</a></li><li class="dropdown-subitem"><a href="/pages/4643cd/" class="nav-link">JS设计模式总结</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/9a7ee40fc232253e/" class="nav-link">技术文档</a></li><li class="dropdown-item"><!----> <a href="/pages/4c778760be26d8b3/" class="nav-link">GitHub技巧</a></li><li class="dropdown-item"><!----> <a href="/pages/117708e0af7f0bd9/" class="nav-link">Nodejs</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div> <a href="https://github.com/h-qing" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/img/logo.png"> <div class="blogger-info"><h3>Rustic</h3> <span>后端界的小学生</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><a href="/server/" class="link-title">后端</a> <span class="title" style="display:none;">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Java</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/java001/" class="nav-link">Jvm-指南</a></li><li class="dropdown-subitem"><a href="/pages/java002/" class="nav-link">Lambda&amp;Stream-API</a></li><li class="dropdown-subitem"><a href="/pages/java003/" class="nav-link">LocalDate大法</a></li><li class="dropdown-subitem"><a href="/pages/java004/" class="nav-link">Juc-指南</a></li><li class="dropdown-subitem"><a href="/pages/java005/" class="nav-link">Spring-指南</a></li><li class="dropdown-subitem"><a href="/pages/java006/" class="nav-link">Java类加载</a></li><li class="dropdown-subitem"><a href="/pages/java007/" class="nav-link">HashMap源码分析</a></li><li class="dropdown-subitem"><a href="/pages/java008/" class="nav-link">Mybatis 源码流程分析</a></li></ul></li><li class="dropdown-item"><h4>Linux</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/linux001/" class="nav-link">Linux-指南</a></li><li class="dropdown-subitem"><a href="/pages/linux002/" class="nav-link">Shell-指南</a></li></ul></li><li class="dropdown-item"><h4>Sql</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/sql001/" class="nav-link">Sql-指南</a></li></ul></li><li class="dropdown-item"><h4>DevOps</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/devops001/" class="nav-link">Docker-指南</a></li><li class="dropdown-subitem"><a href="/pages/devops002/" class="nav-link">K8S-指南</a></li></ul></li><li class="dropdown-item"><h4>其他</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/ohter001/" class="nav-link">ES-指南</a></li><li class="dropdown-subitem"><a href="/pages/ohter002/" class="nav-link">Git-指南</a></li><li class="dropdown-subitem"><a href="/pages/ohter003/" class="nav-link">Redis-指南</a></li><li class="dropdown-subitem"><a href="/pages/ohter004/" class="nav-link">Typora-指南</a></li><li class="dropdown-subitem"><a href="/pages/ohter005/" class="nav-link">Nginx-指南</a></li><li class="dropdown-subitem"><a href="/pages/ohter006/" class="nav-link">正则表达式-指南</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>页面</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/8309a5b876fc95e3/" class="nav-link">HTML</a></li><li class="dropdown-subitem"><a href="/pages/0a83b083bdf257cb/" class="nav-link">CSS</a></li></ul></li><li class="dropdown-item"><h4>前端文章</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/8143cc480faf9a11/" class="nav-link">JavaScript</a></li></ul></li><li class="dropdown-item"><h4>学习笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/note/javascript/" class="nav-link">《JavaScript教程》</a></li><li class="dropdown-subitem"><a href="/note/js/" class="nav-link">《JavaScript高级程序设计》</a></li><li class="dropdown-subitem"><a href="/note/es6/" class="nav-link">《ES6 教程》</a></li><li class="dropdown-subitem"><a href="/note/vue/" class="nav-link">《Vue》</a></li><li class="dropdown-subitem"><a href="/note/react/" class="nav-link">《React》</a></li><li class="dropdown-subitem"><a href="/note/typescript-axios/" class="nav-link">《TypeScript 从零实现 axios》</a></li><li class="dropdown-subitem"><a href="/note/git/" class="nav-link">《Git》</a></li><li class="dropdown-subitem"><a href="/pages/51afd6/" class="nav-link">TypeScript</a></li><li class="dropdown-subitem"><a href="/pages/4643cd/" class="nav-link">JS设计模式总结</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/9a7ee40fc232253e/" class="nav-link">技术文档</a></li><li class="dropdown-item"><!----> <a href="/pages/4c778760be26d8b3/" class="nav-link">GitHub技巧</a></li><li class="dropdown-item"><!----> <a href="/pages/117708e0af7f0bd9/" class="nav-link">Nodejs</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div> <a href="https://github.com/h-qing" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Sql</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>DevOps</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/devops001/" class="sidebar-link">Docker-指南</a></li><li><a href="/pages/DevOps002/" aria-current="page" class="active sidebar-link">K8S-指南</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#使用yaml文件创建deployment" class="sidebar-link">使用yaml文件创建Deployment</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#创建" class="sidebar-link">创建</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#删除命名空间" class="sidebar-link">删除命名空间</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#查看命名空间" class="sidebar-link">查看命名空间</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#在指定命名空间创建各种对象" class="sidebar-link">在指定命名空间创建各种对象</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#列出所有运行的pod信息" class="sidebar-link">列出所有运行的pod信息</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#列出所有replication-controllers和service信息" class="sidebar-link">列出所有replication controllers和service信息</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#列出所有不同的资源对象" class="sidebar-link">列出所有不同的资源对象</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#创建一个名称为yyy的deployment-运行xxx镜像" class="sidebar-link">创建一个名称为yyy的deployment，运行xxx镜像</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#创建并运行一个或多个容器镜像" class="sidebar-link">创建并运行一个或多个容器镜像</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#查看节点labels信息" class="sidebar-link">查看节点labels信息</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#查看节点详细信息" class="sidebar-link">查看节点详细信息</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#修复pod问题" class="sidebar-link">修复pod问题</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#两种方式查看pod的详细信息" class="sidebar-link">两种方式查看pod的详细信息</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#使用scale修改副本数" class="sidebar-link">使用scale修改副本数</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#使用selector决定了请求会被发送给集群里的哪些-pod" class="sidebar-link">使用selector决定了请求会被发送给集群里的哪些 pod</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#其他命令" class="sidebar-link">其他命令</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#参考文件" class="sidebar-link">参考文件</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#centos7配置准备" class="sidebar-link">centos7配置准备</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#docker-安装" class="sidebar-link">docker 安装</a></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#k8s-安装部署" class="sidebar-link">k8s-安装部署</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level4"><a href="/pages/DevOps002/#安装失败操作" class="sidebar-link">安装失败操作</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/DevOps002/#rancher-安装并导入-k8s-集群" class="sidebar-link">rancher 安装并导入 k8s 集群</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/DevOps002/#rancher-安装" class="sidebar-link">rancher 安装</a></li><li class="sidebar-sub-header level3"><a href="/pages/DevOps002/#导入k8s集群" class="sidebar-link">导入k8s集群</a></li><li class="sidebar-sub-header level4"><a href="/pages/DevOps002/#添加集群" class="sidebar-link">添加集群</a></li><li class="sidebar-sub-header level3"><a href="/pages/DevOps002/#部署服务" class="sidebar-link">部署服务</a></li><li class="sidebar-sub-header level3"><a href="/pages/DevOps002/#rancher-部署-jenkins" class="sidebar-link">rancher 部署 jenkins</a></li><li class="sidebar-sub-header level3"><a href="/pages/DevOps002/#rancher-部署-docker-镜像仓库" class="sidebar-link">rancher 部署 docker 镜像仓库</a></li><li class="sidebar-sub-header level3"><a href="/pages/DevOps002/#dockerfile-文件编辑" class="sidebar-link">dockerfile 文件编辑</a></li><li class="sidebar-sub-header level3"><a href="/pages/DevOps002/#jenkins-构建java应用" class="sidebar-link">jenkins 构建Java应用</a></li><li class="sidebar-sub-header level3"><a href="/pages/DevOps002/#rancher-部署java项目" class="sidebar-link">rancher 部署java项目</a></li><li class="sidebar-sub-header level3"><a href="/pages/DevOps002/#jenkins-构建node-js应用" class="sidebar-link">jenkins 构建node.js应用</a></li><li class="sidebar-sub-header level3"><a href="/pages/DevOps002/#rancher-部署node-js项目" class="sidebar-link">rancher 部署node.js项目</a></li></ul></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>其他</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-1baff76c><div class="articleInfo" data-v-1baff76c><ul class="breadcrumbs" data-v-1baff76c><li data-v-1baff76c><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-1baff76c></a></li> <li data-v-1baff76c><a href="/server/#后端" data-v-1baff76c>后端</a></li><li data-v-1baff76c><a href="/server/#DevOps" data-v-1baff76c>DevOps</a></li></ul> <div class="info" data-v-1baff76c><div title="作者" class="author iconfont icon-touxiang" data-v-1baff76c><a href="https://gitee.com/huang-qing" target="_blank" title="作者" class="beLink" data-v-1baff76c>hq</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-1baff76c><a href="javascript:;" data-v-1baff76c>2022-4-15</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABGpJREFUSA3tVVtoXFUU3fvOI53UlmCaKIFmwEhsE7QK0ipFEdHEKpXaZGrp15SINsXUWvBDpBgQRKi0+KKoFeJHfZA+ED9KKoIU2gYD9UejTW4rVIzm0VSTziPzuNu1z507dibTTjL4U/DAzLn3nL3X2o91ziX6f9wMFdh6Jvbm9nNSV0msViVO6tN1Rm7NMu2OpeJ9lWBUTDxrJbYTS0hInuwciu9eLHlFxCLCZEk3MegsJmZ5K/JD6t7FkFdEvGUo1g7qJoG3MHImqRIn8/nzY1K9UPKKiJmtnUqHVE3Gbuay6vJE/N2FEmuxFjW2nUuE0yQXRRxLiTUAzs36zhZvOXJPdX850EVnnLZkB8prodQoM5JGj7Xk2mvC7JB8tG04Ef5PiXtG0UtxupRQSfTnBoCy554x18yJHI6I+G5Eru4LHmPJZEQsrvPUbMiA8G/WgMK7w7I+ez7++o2ANfbrjvaOl1tFMs+htG3IrZH9/hDX1Pr8Tc0UvH8tcX29KzAgIGcEkINyW5BF9x891hw6VYqgJHEk0huccS7vh3C6gTiODL+26huuBtbct8eZnqLML8PkxGYpuPZBqtqwkSjgc4mB5gbgig5i+y0UDK35LMxXisn9xQtK+nd26gTIHsHe/oblK/b29fUmN/8Y+9jAQrnBp56m1LcDlDp9irKTExSKduXJVWSqdBMA08pEJnEIOB3FPPMybu/oeV8zFeYN3xx576Q6RH+VmplE4ncQV5v+5rzSoyOU7PuEAg8g803PwBJ0CExno/jcMbN8tONYeOmHiuUNryvm3fRUy4tMPVLdAGkUhNWuggGrJcXPv+ouCjz0MKUHz1J2/E8IC9nqTabcxgaBYM0hPhD5Y65FsbxRQKxCQrDjDctW7PUM3HuZunFyifSAqEfuzCp48Il24luWUWZoyJCaPR82jE0+kFA643wRFVni4RYSq3ohJO2pZ7B5dO4xkDWbEpossJPLSrPjYID8rS2UHTlvyNxqIGsg674XJJ7vnh5L7PNwC4hh2sjCI96mzszOTpxLF0T7l88Yz7lAuK6OnL8gXLOnTvpzSb22YG8W7us3jSebFHeeqnXRG1vt+MoUM84LQIBmMsCTAcOauTh0T0l0neQK7m2bLMt2mGxU3HYssS0J2cdv5wljlPsrIuZLAG/2DOZIXgCYT8uMGZN+e2kSirfxZOPCsC0f24nTZzspnVn9VePS1Z5vubmAGGXG8ZFno9Hel0yfA5ZPhF7Dh972BQJ2qCpgH67lmWtBYbvk6sz02wjky2vXyz0XErP/kFB619js1BtwfOV4OPRqOQBjy3Qbk18vigUPPSD5ceHnwck7W9bhAqZdd7SuG7w4/P2F/GaJh8c7e9qgow+Q7cGBo+98WsLkuktFqiZabtXuQTu/Y5ETbR0v7tNSFnvrmu6pjdoan2KjMu8q/Hmj1EfCO2ZGfEIbIXKUlw8qaX9/b2oeSJmFksSeT/Fn0V3nSypChh4Gjh74ybO9aeZ/AN2dwciu2/MhAAAAAElFTkSuQmCC">K8S-指南<span class="title-tag">原创</span></h1>  <div class="theme-vdoing-content content__default"><h1 id="k8s-常用命令"><a href="#k8s-常用命令" class="header-anchor">#</a> k8s-常用命令</h1> <h2 id="使用yaml文件创建deployment"><a href="#使用yaml文件创建deployment" class="header-anchor">#</a> 使用yaml文件创建Deployment</h2> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code>kubectl <span class="token keyword">create</span> <span class="token operator">-</span>f docs<span class="token operator">/</span><span class="token keyword">user</span><span class="token operator">-</span>guide<span class="token operator">/</span>nginx<span class="token operator">-</span>deployment<span class="token punctuation">.</span>yaml <span class="token comment">--record</span>
+<span class="token comment"># 创建成功后会输出：deployment &quot;nginx-deployment&quot; created</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div> <h2 id="创建"><a href="#创建" class="header-anchor">#</a> 创建</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 通过命令行创建</span>
+kubectl create namespace xxx    <span class="token comment"># 创建命名空间</span>
+kubectl create -f ./pod.json  --namespace<span class="token operator">=</span>xxx    <span class="token comment"># 通过json文件创建pod</span>
+<span class="token comment"># 通过文件创建，my-namespace.yaml</span>
+apiVersion: V1
+kind: Namespace
+metadata:
+     name: new-namespace
+
+kubectl create -f my-namespace.yaml
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="删除命名空间"><a href="#删除命名空间" class="header-anchor">#</a> 删除命名空间</h2> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code>kubectl <span class="token keyword">delete</span> <span class="token keyword">namespace</span> xxx
+<span class="token macro property"><span class="token directive-hash">#</span> <span class="token directive keyword">default</span><span class="token expression">和kube<span class="token operator">-</span>system不可删</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="查看命名空间"><a href="#查看命名空间" class="header-anchor">#</a> 查看命名空间</h2> <div class="language-csharp line-numbers-mode"><pre class="language-csharp"><code>kubectl <span class="token keyword">get</span> <span class="token keyword">namespace</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="在指定命名空间创建各种对象"><a href="#在指定命名空间创建各种对象" class="header-anchor">#</a> 在指定命名空间创建各种对象</h2> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code>kubectl <span class="token keyword">create</span> <span class="token operator">-</span>f https:<span class="token comment">//k8s.io/docs/tasks/administer-cluster/quota-pod.yaml --namespace=xxx  #  创建ResourceQuota对象</span>
+kubectl get resourcequota pod<span class="token operator">-</span>demo <span class="token comment">--namespace=xxx --output=yaml     # 查看ResourceQuota对象的详细信息</span>
+kubectl <span class="token keyword">create</span> <span class="token operator">-</span>f https:<span class="token comment">//k8s.io/docs/tasks/administer-cluster/quota-pod-deployment.yaml --namespace=xxx    # 尝试在命名空间创建Deployment      </span>
+kubectl get deployment pod<span class="token operator">-</span>quota<span class="token operator">-</span>demo <span class="token comment">--namespace=xxx --output=yaml   # 查看Deployment的详细信息</span>
+kubectl get <span class="token keyword">all</span> <span class="token comment">--namespace    # 列出所有不同的资源对象</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="列出所有运行的pod信息"><a href="#列出所有运行的pod信息" class="header-anchor">#</a> 列出所有运行的pod信息</h2> <div class="language-csharp line-numbers-mode"><pre class="language-csharp"><code>kubectl <span class="token keyword">get</span> pods <span class="token operator">--</span><span class="token keyword">namespace</span><span class="token operator">=</span>xxx     # <span class="token operator">--</span><span class="token keyword">namespace</span>指定命名空间
+kubectl <span class="token keyword">get</span> pods <span class="token operator">-</span>o wide     # 列出pod以及运行pod节点信息
+kubectl <span class="token keyword">get</span> <span class="token operator">-</span>o json pod web<span class="token operator">-</span>pod<span class="token operator">-</span>xxx      # 以json格式输出一个pod信息
+kubectl <span class="token keyword">get</span> <span class="token operator">-</span>f pod<span class="token punctuation">.</span>yaml <span class="token operator">-</span>o json             # 以pod<span class="token punctuation">.</span>yaml文件中指定的资源对象和名称输出json格式的Pod信息
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="列出所有replication-controllers和service信息"><a href="#列出所有replication-controllers和service信息" class="header-anchor">#</a> 列出所有replication controllers和service信息</h2> <div class="language-csharp line-numbers-mode"><pre class="language-csharp"><code>kubectl <span class="token keyword">get</span> rc<span class="token punctuation">,</span>services
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="列出所有不同的资源对象"><a href="#列出所有不同的资源对象" class="header-anchor">#</a> 列出所有不同的资源对象</h2> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code>kubectl  get  <span class="token keyword">all</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="创建一个名称为yyy的deployment-运行xxx镜像"><a href="#创建一个名称为yyy的deployment-运行xxx镜像" class="header-anchor">#</a> 创建一个名称为yyy的deployment，运行xxx镜像</h2> <div class="language-lua line-numbers-mode"><pre class="language-lua"><code>kubectl  create deployment  yyy  <span class="token comment">--image=xxx</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="创建并运行一个或多个容器镜像"><a href="#创建并运行一个或多个容器镜像" class="header-anchor">#</a> 创建并运行一个或多个容器镜像</h2> <div class="language-dockerfile line-numbers-mode"><pre class="language-dockerfile"><code>kubectl run nginx  --image=nginx      # 启动nginx实例
+kubectl  run hazelcast  --image=hazecast  --port=5701   # 启动hazelcast实例，暴露容器端口5701
+kubectl run hazelcast --image=hazelcast --env=&quot;DNS_DOMAIN=cluster&quot; --env=&quot;POD_NAMESPACE=default&quot;   # 在容器中设置环境变量“DNS_DOMAIN = cluster”和“POD_NAMESPACE = default”
+kubectl run nginx --image=nginx --replicas=5     # 启动nginx实例，设置副本数5
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="查看节点labels信息"><a href="#查看节点labels信息" class="header-anchor">#</a> 查看节点labels信息</h2> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code>kubectl get note <span class="token comment">--show-labels</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="查看节点详细信息"><a href="#查看节点详细信息" class="header-anchor">#</a> 查看节点详细信息</h2> <div class="language-scss line-numbers-mode"><pre class="language-scss"><code>kubectl describe node <span class="token function">master</span><span class="token punctuation">(</span>节点名<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="修复pod问题"><a href="#修复pod问题" class="header-anchor">#</a> 修复pod问题</h2> <div class="language-cmake line-numbers-mode"><pre class="language-cmake"><code>kubectl get deploy shutao -n fst-test  -o yaml <span class="token punctuation">&gt;</span> shutao.yaml    <span class="token comment"># 将pod生成yaml文件，修改故障</span>
+kubectl  apply -f shutao.yaml  <span class="token comment"># 使用这个命令更新pod</span>
+kubectl  replace -f  shutao.yaml     <span class="token comment"># 也可以使用这个命令更新</span>
+kubectl  patch pod xxxxx -p '{<span class="token string">&quot;metadata&quot;</span>:{<span class="token string">&quot;labels&quot;</span>:{<span class="token string">&quot;app&quot;</span>:<span class="token string">&quot;nginx-3&quot;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span>'    <span class="token comment"># 在容器运行时，直接对容器进行修改，此命令修改了label参数</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="两种方式查看pod的详细信息"><a href="#两种方式查看pod的详细信息" class="header-anchor">#</a> 两种方式查看pod的详细信息</h2> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code>kubectl get po xxxxx <span class="token operator">-</span>o yaml <span class="token operator">-</span>n nnnnn
+
+kubectl <span class="token keyword">describe</span> po xxxxxxx <span class="token operator">-</span>n nnnnn
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="使用scale修改副本数"><a href="#使用scale修改副本数" class="header-anchor">#</a> 使用scale修改副本数</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code>kubectl scale rc rc<span class="token operator">-</span>nginx<span class="token operator">-</span><span class="token number">3</span>    <span class="token operator">-</span><span class="token operator">-</span>replicas<span class="token operator">=</span><span class="token number">4</span>   <span class="token comment"># 使用scale修改副本数为4, 此命令仅限于非deployment下的pod</span>
+kubectl autoscale rc rc<span class="token operator">-</span>nginx<span class="token operator">-</span><span class="token number">3</span> <span class="token operator">-</span><span class="token operator">-</span><span class="token builtin">min</span><span class="token operator">=</span><span class="token number">1</span> <span class="token operator">-</span><span class="token operator">-</span><span class="token builtin">max</span><span class="token operator">=</span><span class="token number">4</span>    <span class="token comment"># 使用autoscale根据负载自动在制定范围内进行扩容或缩容，此命令为设置副本范围在1～4个之间</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="使用selector决定了请求会被发送给集群里的哪些-pod"><a href="#使用selector决定了请求会被发送给集群里的哪些-pod" class="header-anchor">#</a> 使用selector决定了请求会被发送给集群里的哪些 pod</h2> <p><img src="https://img2020.cnblogs.com/blog/1633991/202104/1633991-20210409172549937-1118566214.png" alt="img">
+这里的定义是所有包含「app: k8s-demo」这个标签的 pod。可以使用以下命令查看创建的pod所有的标签
+<code>kubectl describe pods | grep Labels</code></p> <h2 id="其他命令"><a href="#其他命令" class="header-anchor">#</a> 其他命令</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment">## K8S常用命令：</span>
+
+<span class="token comment">## 查看pod: kubectl get pod -n名称空间</span>
+
+<span class="token comment">## 进入容器： kubectl exec -it pod名字 -n名称空间 bash</span>
+
+<span class="token comment">## 查看类命令：</span>
+
+<span class="token comment">## 获取节点和服务版本信息，并查看附加信息</span>
+
+kubectl get nodes -o wide <span class="token operator">||</span> kubectl get nodes -o wide -A
+
+<span class="token comment">## 获取pod信息，默认是default名称空间</span>
+
+kubectl get pod
+
+<span class="token comment">## 获取pod信息，默认是default名称空间，并查看附加信息【如：pod的IP及在哪个节点运行】</span>
+
+kubectl get pod -o wide <span class="token operator">||</span> kubectl get pod -o wide -A
+
+<span class="token comment">## 获取指定名称空间的pod</span>
+
+kubectl get pod -n kube-system
+
+<span class="token comment">## 获取指定名称空间中的指定pod</span>
+
+kubectl get pod -n kube-system podName
+
+<span class="token comment">## 获取所有名称空间的pod</span>
+
+kubectl get pod -A
+
+<span class="token comment">## 查看pod的详细信息，以yaml格式或json格式显示</span>
+
+kubectl get pods -o yaml
+
+kubectl get pods -o json
+
+<span class="token comment">## 查看pod的标签信息</span>
+
+kubectl get pod -A --show-labels
+
+<span class="token comment">## 根据Selector（label query）来查询pod</span>
+
+kubectl get pod -A --selector<span class="token operator">=</span>“k8s-app<span class="token operator">=</span>kube-dns”
+
+<span class="token comment">## 查看运行pod的环境变量</span>
+
+kubectl <span class="token builtin class-name">exec</span> podName <span class="token function">env</span>
+
+<span class="token comment">## 查看指定pod的日志</span>
+
+kubectl logs -f --tail <span class="token number">500</span> -n kube-system kube-apiserver-k8s-master
+
+<span class="token comment">## 查看所有名称空间的service信息</span>
+
+kubectl get svc -A
+
+<span class="token comment">## 查看指定名称空间的service信息</span>
+
+kubectl get svc -n kube-system
+
+<span class="token comment">## 查看componentstatuses信息</span>
+
+kubectl get cs
+
+<span class="token comment">## 查看所有configmaps信息</span>
+
+kubectl get cm -A
+
+<span class="token comment">## 查看所有serviceaccounts信息</span>
+
+kubectl get sa -A
+
+<span class="token comment">## 查看所有daemonsets信息</span>
+
+kubectl get ds -A
+
+<span class="token comment">## 查看所有deployments信息</span>
+
+kubectl get deploy -A
+
+<span class="token comment">## 查看所有replicasets信息</span>
+
+kubectl get rs -A
+
+<span class="token comment">## 查看所有statefulsets信息</span>
+
+kubectl get sts -A
+
+<span class="token comment">## 查看所有jobs信息</span>
+
+kubectl get <span class="token function">jobs</span> -A
+
+<span class="token comment">## 查看所有ingresses信息</span>
+
+kubectl get ing -A
+
+<span class="token comment">## 查看有哪些名称空间</span>
+
+kubectl get ns
+
+<span class="token comment">## 查看pod的描述信息</span>
+
+kubectl describe pod podName
+
+kubectl describe pod -n kube-system kube-apiserver-k8s-master
+
+<span class="token comment">## 查看指定名称空间中指定deploy的描述信息</span>
+
+kubectl describe deploy -n kube-system coredns
+
+<span class="token comment">## 查看node或pod的资源使用情况</span>
+
+<span class="token comment">## 需要heapster 或metrics-server支持</span>
+
+kubectl <span class="token function">top</span> <span class="token function">node</span>
+
+kubectl <span class="token function">top</span> pod
+
+<span class="token comment">## 查看集群信息</span>
+
+kubectl cluster-info 或 kubectl cluster-info dump
+
+<span class="token comment">## 查看各组件信息【172.16.1.110为master机器】</span>
+
+kubectl -s https://172.16.1.110:6443 get componentstatuses
+
+<span class="token comment">## 进阶命令操作：</span>
+
+<span class="token comment">## kubectl exec：进入pod启动的容器</span>
+
+kubectl <span class="token builtin class-name">exec</span> -it podName -n nsName /bin/sh <span class="token comment">## 进入容器</span>
+
+kubectl <span class="token builtin class-name">exec</span> -it podName -n nsName /bin/bash <span class="token comment">## 进入容器</span>
+
+<span class="token comment">## kubectl label：添加label值</span>
+
+kubectl label nodes k8s-node01 <span class="token assign-left variable">zone</span><span class="token operator">=</span>north <span class="token comment">## 为指定节点添加标签</span>
+
+kubectl label nodes k8s-node01 zone- <span class="token comment">## 为指定节点删除标签</span>
+
+kubectl label pod podName -n nsName role-name<span class="token operator">=</span>test <span class="token comment">## 为指定pod添加标签</span>
+
+kubectl label pod podName -n nsName role-name<span class="token operator">=</span>dev --overwrite <span class="token comment">## 修改lable标签值</span>
+
+kubectl label pod podName -n nsName role-name- <span class="token comment">## 删除lable标签</span>
+
+<span class="token comment">## kubectl滚动升级； 通过 kubectl apply -f myapp-deployment-v1.yaml 启动deploy</span>
+
+kubectl apply -f myapp-deployment-v2.yaml <span class="token comment">## 通过配置文件滚动升级</span>
+
+kubectl <span class="token builtin class-name">set</span> image deploy/myapp-deployment <span class="token assign-left variable">myapp</span><span class="token operator">=</span>“registry.cn-beijing.aliyuncs.com/google_registry/myapp:v3” <span class="token comment">## 通过命令滚动升级</span>
+
+kubectl rollout undo deploy/myapp-deployment 或者 kubectl rollout undo deploy myapp-deployment <span class="token comment">## pod回滚到前一个版本</span>
+
+kubectl rollout undo deploy/myapp-deployment --to-revision<span class="token operator">=</span><span class="token number">2</span> <span class="token comment">## 回滚到指定历史版本</span>
+
+<span class="token comment">## kubectl scale：动态伸缩</span>
+
+kubectl scale deploy myapp-deployment --replicas<span class="token operator">=</span><span class="token number">5</span> <span class="token comment">##  动态伸缩</span>
+
+kubectl scale --replicas<span class="token operator">=</span><span class="token number">8</span> -f myapp-deployment-v2.yaml <span class="token comment">## 动态伸缩【根据资源类型和</span>
+
+<span class="token comment">## 操作类命令：</span>
+
+<span class="token comment">## 创建资源</span>
+
+kubectl create -f xxx.yaml
+
+<span class="token comment">## 应用资源</span>
+
+kubectl apply -f xxx.yaml
+
+<span class="token comment">## 应用资源，该目录下的所有 .yaml, .yml, 或 .json 文件都会被使用</span>
+
+kubectl apply -f
+
+<span class="token comment">## 创建test名称空间</span>
+
+kubectl create namespace <span class="token builtin class-name">test</span>
+
+<span class="token comment">## 删除资源</span>
+
+kubectl delete -f xxx.yaml
+
+kubectl delete -f
+
+<span class="token comment">## 删除指定的pod</span>
+
+kubectl delete pod podName
+
+<span class="token comment">## 删除指定名称空间的指定pod</span>
+
+kubectl delete pod -n <span class="token builtin class-name">test</span> podName
+
+<span class="token comment">## 删除其他资源</span>
+
+kubectl delete svc svcName
+
+kubectl delete deploy deployName
+
+kubectl delete ns nsName
+
+<span class="token comment">## 强制删除</span>
+
+kubectl delete pod podName -n nsName --grace-period<span class="token operator">=</span><span class="token number">0</span> --force
+
+kubectl delete pod podName -n nsName --grace-period<span class="token operator">=</span><span class="token number">1</span>
+
+kubectl delete pod podName -n nsName --now
+
+<span class="token comment">## 编辑资源</span>
+
+kubectl edit pod podName
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br></div></div><h1 id="docker-rancher-k8s安装部署"><a href="#docker-rancher-k8s安装部署" class="header-anchor">#</a> docker &amp; rancher &amp; k8s安装部署</h1> <h2 id="参考文件"><a href="#参考文件" class="header-anchor">#</a> 参考文件</h2> <p>[docker &amp; rancher &amp; k8s安装部署](.\docker &amp; rancher &amp; k8s 安装部署)</p> <h2 id="centos7配置准备"><a href="#centos7配置准备" class="header-anchor">#</a> centos7配置准备</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 所有机器都要操作</span>
+
+<span class="token comment"># 关闭防火墙 或者开放端口</span>
+<span class="token function">sudo</span> systemctl stop firewalld
+<span class="token function">sudo</span> systemctl disable firewalld
+
+<span class="token comment">#----------------------------------------</span>
+<span class="token comment">#设置hostname &amp;&amp; 设置hosts</span>
+
+<span class="token comment">## 这里我的ip为 192.168.238.129</span>
+<span class="token comment">## 主节点</span>
+hostnamectl set-hostname k8s-master-01
+<span class="token comment">## 从节点</span>
+hostnamectl set-hostname k8s-node-01
+
+<span class="token function">vi</span> /etc/hosts
+<span class="token comment">##主节点</span>
+<span class="token number">192.168</span>.238.129 k8s-master-01
+<span class="token comment">##从节点</span>
+<span class="token number">192.168</span>.238.130  k8s-node-01
+
+<span class="token comment">#----------------------------------------</span>
+
+<span class="token comment">##设置ip为静态</span>
+
+<span class="token function">vi</span> /ect/sysconfig/network-scripts/ifcfg-ens33
+
+<span class="token assign-left variable">BOOTPROTO</span><span class="token operator">=</span>static
+<span class="token assign-left variable">IPADDR</span><span class="token operator">=</span><span class="token number">192.168</span>.238.129 <span class="token comment">#所属主机ip</span>
+<span class="token assign-left variable">GATEWAY</span><span class="token operator">=</span><span class="token number">192.168</span>.238.2  <span class="token comment">#网关地址  可在 vm 中的虚拟网络编辑器查看</span>
+<span class="token assign-left variable">NETWORK</span><span class="token operator">=</span><span class="token number">255.255</span>.255.0
+<span class="token assign-left variable">DNS1</span><span class="token operator">=</span><span class="token number">8.8</span>.8.8
+<span class="token assign-left variable">DNS2</span><span class="token operator">=</span><span class="token number">192.168</span>.238.2
+<span class="token assign-left variable">ONBOOT</span><span class="token operator">=</span>yes
+
+systemctl restart network
+
+<span class="token comment"># 安装ifconfig 如果主机有下面命令 则无需操作</span>
+yum search <span class="token function">ifconfig</span>
+yum <span class="token function">install</span> -y net-tools.x86_64
+yum -y <span class="token function">install</span> <span class="token function">wget</span>
+yum <span class="token function">install</span> -y lrzsz
+
+
+<span class="token comment">#----------------------------------------</span>
+
+<span class="token comment"># 安装时间同步插件</span>
+https://blog.csdn.net/vah101/article/details/91868147
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br></div></div><h2 id="docker-安装"><a href="#docker-安装" class="header-anchor">#</a> docker 安装</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 依赖</span>
+yum -y <span class="token function">install</span> yum-utils
+<span class="token comment"># 安装docker 源</span>
+yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+<span class="token comment"># 查看可安装docker版本</span>
+yum list docker-ce --showduplicates<span class="token operator">|</span><span class="token function">sort</span> -r
+<span class="token comment"># 指定版本安装</span>
+yum <span class="token function">install</span> -y <span class="token string">&quot;docker-ce-18*&quot;</span> 
+<span class="token comment"># 开机自启并启动</span>
+systemctl <span class="token builtin class-name">enable</span> <span class="token function">docker</span> <span class="token operator">&amp;&amp;</span> systemctl restart <span class="token function">docker</span> 
+
+<span class="token comment"># 镜像加速</span>
+<span class="token function">vi</span> /etc/docker/daemon.json 
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;registry-mirrors&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span><span class="token string">&quot;http://f1361db2.m.daocloud.io&quot;</span>,<span class="token string">&quot;https://nidf33r8.mirror.aliyuncs.com&quot;</span>,<span class="token string">&quot;https://docker.mirrors.ustc.edu.cn&quot;</span>,<span class="token string">&quot;https://hub-mirror.c.163.com&quot;</span>,<span class="token string">&quot;https://registry.docker-cn.com&quot;</span><span class="token punctuation">]</span>,
+  <span class="token string">&quot;exec-opts&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span><span class="token string">&quot;native.cgroupdriver=systemd&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h2 id="k8s-安装部署"><a href="#k8s-安装部署" class="header-anchor">#</a> k8s-安装部署</h2> <p>centos7安装k8s指定版本 v1.16.2</p> <p>第1步: 配置yum源</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 所有机器都要配置国内Kubernetes源地址 </span>
+<span class="token comment"># 执行命令:</span>
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span><span class="token string">EOF<span class="token bash punctuation"> <span class="token operator">&gt;</span> /etc/yum.repos.d/kubernetes.repo </span>
+[kubernetes] 
+    name=Kubernetes 
+    baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/ 
+    enabled=1 
+    gpgcheck=1 
+    repo_gpgcheck=1 
+    gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
+EOF</span>
+
+<span class="token comment"># 或者</span>
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span><span class="token string">EOF<span class="token bash punctuation"> <span class="token operator">&gt;</span> /etc/yum.repos.d/kubernetes.repo</span>
+[kubernetes]
+name=Kubernetes
+baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64
+enabled=1
+gpgcheck=0
+EOF</span>
+ 
+yum -y <span class="token function">install</span> epel-release
+ 
+yum clean all
+ 
+yum makecache
+
+
+<span class="token comment"># 如果源失效 使用配置阿里云源</span>
+<span class="token comment"># centos7 修改yum源为阿里源</span>
+<span class="token comment"># 首先是到yum源设置文件夹里</span>
+<span class="token comment"># 1. 查看yum源信息:</span>
+  yum repolist
+<span class="token comment"># 2. 定位到base reop源位置</span>
+  <span class="token builtin class-name">cd</span> /etc/yum.repos.d
+<span class="token comment"># 3. 接着备份旧的配置文件</span>
+  <span class="token function">mv</span> CentOS-Base.repo CentOS-Base.repo.bak
+<span class="token comment"># 4. 下载阿里源的文件</span>
+  <span class="token function">wget</span> -O CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+<span class="token comment"># ---------------------------红帽版本一样的安装------------------------------</span>
+<span class="token comment"># 安装epel repo源：</span>
+<span class="token comment"># epel(RHEL 7) 红帽7</span>
+   <span class="token function">wget</span> -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
+<span class="token comment"># epel(RHEL 6) 红帽6</span>
+   <span class="token function">wget</span> -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-6.repo
+<span class="token comment"># epel(RHEL 5) 红帽5</span>
+   <span class="token function">wget</span> -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-5.repo
+<span class="token comment"># ------------------------------------------------------------------------------    </span>
+<span class="token comment"># 5.清理缓存</span>
+   yum clean all
+<span class="token comment"># 6.重新生成缓存</span>
+   yum makecache
+<span class="token comment"># 7. 再次查看yum源信息</span>
+   yum repolist
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br></div></div><p>第2步:所有节点安装docker,选好docker版本  如果已经安装可以跳过</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>yum -y <span class="token function">install</span> yum-utils
+yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+yum list docker-ce --showduplicates<span class="token operator">|</span><span class="token function">sort</span> -r
+yum <span class="token function">install</span> -y <span class="token string">&quot;docker-ce-18*&quot;</span>
+systemctl <span class="token builtin class-name">enable</span> <span class="token function">docker</span> <span class="token operator">&amp;&amp;</span> systemctl restart <span class="token function">docker</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>第3步:  参数设置和安装对应的依赖包;每台节点都要安装</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 临时关闭防火墙 </span>
+setenforce <span class="token number">0</span> 
+systemctl disable firewalld 
+systemctl stop firewalld 
+<span class="token function">sed</span> -i <span class="token string">'s/SELINUX=enforcing/SELINUX=disabled/g'</span> /etc/selinux/config 
+iptables -F 
+iptables -F -t nat 
+iptables -F -t raw 
+iptables -F -t mangle 
+modprobe br_netfilter 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;* soft nofile 655360&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/security/limits.conf 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;* hard nofile 655360&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/security/limits.conf 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;* soft nproc 655360&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/security/limits.conf 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;* hard nproc 655360&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/security/limits.conf 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;* soft memlock unlimited&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/security/limits.conf 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;* hard memlock unlimited&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/security/limits.conf 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;* hard memlock unlimited&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/security/limits.conf 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;DefaultLimitNOFILE=1024000&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/systemd/system.conf 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;DefaultLimitNPROC=1024000&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/systemd/system.conf 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;DefaultLimitNPROC=1024000&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/systemd/system.conf 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;net.bridge.bridge-nf-call-ip6tables = 1&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/sysctl.conf 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;net.bridge.bridge-nf-call-iptables = 1&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/sysctl.conf 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;net.ipv4.ip_forward = 1&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/sysctl.conf 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;vm.swappiness = 0&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/sysctl.conf 
+sysctl -w vm.swappiness<span class="token operator">=</span><span class="token number">0</span> 
+swapoff -a 
+<span class="token function">sed</span> -i <span class="token string">'s/.*swap.*/#&amp;/'</span> /etc/fstab 
+sysctl -p 
+yum <span class="token function">install</span> -y conntrack ipvsadm ipset jq sysstat <span class="token function">curl</span> iptables libseccomp bash-completion 
+yum <span class="token function">install</span> -y yum-utils device-mapper-persistent-data lvm2 net-tools conntrack-tools <span class="token function">vim</span> libtool-ltdl 
+yum <span class="token function">install</span> -y yum-utils device-mapper-persistent-data lvm2 net-tools conntrack-tools <span class="token function">vim</span> libtool-ltdl 
+yum <span class="token function">install</span> systemd-* -y 
+yum <span class="token function">install</span> chrony -y 
+systemctl <span class="token builtin class-name">enable</span> chronyd.service <span class="token operator">&amp;&amp;</span> systemctl start chronyd.service 
+<span class="token function">cp</span> -rf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><p>第4步:每台服务器都要执行,用于docker加速和docker文件引擎配置 如果已操作 可跳过</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token punctuation">[</span>root@k8s-master01 k8s<span class="token punctuation">]</span><span class="token comment"># vi /etc/docker/daemon.json </span>
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;registry-mirrors&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span><span class="token string">&quot;http://f1361db2.m.daocloud.io&quot;</span>,<span class="token string">&quot;https://nidf33r8.mirror.aliyuncs.com&quot;</span>,<span class="token string">&quot;https://docker.mirrors.ustc.edu.cn&quot;</span>,<span class="token string">&quot;https://hub-mirror.c.163.com&quot;</span>,<span class="token string">&quot;https://registry.docker-cn.com&quot;</span><span class="token punctuation">]</span>,
+  <span class="token string">&quot;exec-opts&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span><span class="token string">&quot;native.cgroupdriver=systemd&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>第5步:在master节点安装如下软件(master节点)  版本要对上，这里是指定安装1.16.2，所以写死了；</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>yum <span class="token function">install</span> -y kubectl-1.16.2-0.x86_64 kubeadm-1.16.2-0.x86_64 kubelet-1.16.2-0.x86_64 kubernetes-cni-0.7.5-0.x86_64
+systemctl <span class="token builtin class-name">enable</span> kubelet <span class="token operator">&amp;&amp;</span> systemctl start kubelet
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>第6步: 在node节点执行</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>yum <span class="token function">install</span> -y  kubelet-1.16.2-0.x86_64  kubeadm-1.16.2-0.x86_64
+systemctl <span class="token builtin class-name">enable</span> kubelet <span class="token operator">&amp;&amp;</span> systemctl start kubelet
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>第7步: 在master节点上执行,查看当前kubeadm版本安装的kubernetes版本和获取镜像地址</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>kubeadm config print init-defaults <span class="token operator">&gt;</span> /root/kubeadm.conf
+kubeadm config images list <span class="token operator">&gt;</span> /root/mages-list.txt   
+<span class="token comment"># 然后查看/root/mages-list.txt 文件里的内容,可以看到默认都是官方谷歌的镜像,由于国内访问谷歌网络限制,</span>
+<span class="token comment"># 很多镜像拉不下来,因此需要将对应的国内的阿里云镜像下载下来然后打个谷歌的tag,操作的步骤如5,</span>
+<span class="token comment"># 注意比对images里的版本需要和/root/mages-list.txt 里版本对应,将/root/mages-list.txt 里的各个组件对应的版本号修为为第5步images里的版本号;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>第8步: 在master节点上,从/root/mages-list.txt 文件里的官方镜像重新从国内pull下来并打tag</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 新建一个文件在/root/目录下,文件名为:  k8s.sh </span>
+<span class="token comment"># 文件内容如下: 这里以v1.16.2为例</span>
+
+
+<span class="token comment">#!/bin/bash </span>
+<span class="token assign-left variable">images</span><span class="token operator">=</span><span class="token punctuation">(</span> kube-apiserver:v1.16.2 kube-controller-manager:v1.16.2 kube-scheduler:v1.16.2 kube-proxy:v1.16.2 pause:3.1 etcd:3.3.15-0 coredns:1.6.2 kubernetes-dashboard-amd64:v1.10.0 heapster-amd64:v1.5.4 heapster-grafana-amd64:v5.0.4 heapster-influxdb-amd64:v1.5.2 pause-amd64:3.1 <span class="token punctuation">)</span>
+<span class="token keyword">for</span> <span class="token for-or-select variable">imageName</span> <span class="token keyword">in</span> <span class="token variable">${images<span class="token punctuation">[</span>@<span class="token punctuation">]</span>}</span> <span class="token punctuation">;</span> 
+<span class="token keyword">do</span> 
+     <span class="token function">docker</span> pull registry.cn-hangzhou.aliyuncs.com/google_containers/<span class="token variable">$imageName</span> 
+     <span class="token function">docker</span> tag registry.cn-hangzhou.aliyuncs.com/google_containers/<span class="token variable">$imageName</span> k8s.gcr.io/<span class="token variable">$imageName</span>
+<span class="token keyword">done</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>第9步:给镜像打tag,执行上面的脚本 所有节点都要执行</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">sh</span> -x /root/k8s.sh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>第10步:部署Master,在master节点执行: 注意xxx.xxx.xxx.xxx.xxx换成master节点的IP</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment">#####kubeadm init  --config /root/kubeadmin.conf####</span>
+<span class="token comment"># pod-network-cidr=10.244.0.0/16 此处要与 flannel-k8s-v1.16.2.yaml中的 Network 保持一致  如下</span>
+<span class="token comment">#  net-conf.json: | </span>
+<span class="token comment">#     {</span>
+<span class="token comment">#       &quot;Network&quot;: &quot;10.244.0.0/16&quot;,</span>
+<span class="token comment">#       &quot;Backend&quot;: {</span>
+<span class="token comment">#         &quot;Type&quot;: &quot;vxlan&quot;</span>
+<span class="token comment">#       }</span>
+<span class="token comment">#     }</span>
+
+<span class="token comment"># 初始化k8s之前先删除 /var/lib/etcd/下的文件 不然启动会报错</span>
+<span class="token function">rm</span> -rf ./*  /var/lib/etcd/
+
+kubeadm init --apiserver-advertise-address<span class="token operator">=</span><span class="token number">192.168</span>.238.129 --kubernetes-version v1.16.2  --pod-network-cidr<span class="token operator">=</span><span class="token number">10.244</span>.0.0/16  --service-cidr<span class="token operator">=</span><span class="token number">10.96</span>.0.0/16
+
+<span class="token comment"># 启动成功会有提示</span>
+
+
+Your Kubernetes control-plane has initialized successfully<span class="token operator">!</span>
+
+To start using your cluster, you need to run the following as a regular user:
+
+  <span class="token function">mkdir</span> -p <span class="token environment constant">$HOME</span>/.kube
+  <span class="token function">sudo</span> <span class="token function">cp</span> -i /etc/kubernetes/admin.conf <span class="token environment constant">$HOME</span>/.kube/config
+  <span class="token function">sudo</span> <span class="token function">chown</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">id</span> -u<span class="token variable">)</span></span><span class="token builtin class-name">:</span><span class="token variable"><span class="token variable">$(</span><span class="token function">id</span> -g<span class="token variable">)</span></span> <span class="token environment constant">$HOME</span>/.kube/config
+
+You should now deploy a pod network to the cluster.
+Run <span class="token string">&quot;kubectl apply -f [podnetwork].yaml&quot;</span> with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+Then you can <span class="token function">join</span> any number of worker nodes by running the following on each as root:
+
+<span class="token comment"># 此处为给node节点注册用</span>
+kubeadm <span class="token function">join</span> <span class="token number">192.168</span>.81.128:6443 --token 6htrdv.xpsc2r7ez9wmbeto <span class="token punctuation">\</span>
+    --discovery-token-ca-cert-hash sha256:ec39d74ca1dab2ce811e1d569cb0a71fc833342b8a97709b59b7ddf38dde3749
+    
+<span class="token comment"># 按照步骤 创建</span>
+  <span class="token function">mkdir</span> -p <span class="token environment constant">$HOME</span>/.kube
+  <span class="token function">sudo</span> <span class="token function">cp</span> -i /etc/kubernetes/admin.conf <span class="token environment constant">$HOME</span>/.kube/config
+  <span class="token function">sudo</span> <span class="token function">chown</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">id</span> -u<span class="token variable">)</span></span><span class="token builtin class-name">:</span><span class="token variable"><span class="token variable">$(</span><span class="token function">id</span> -g<span class="token variable">)</span></span> <span class="token environment constant">$HOME</span>/.kube/config
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><p>第11步:在master节点执行:master节点要安装flannel：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 这个是从官网下载的最新版本的flannel，</span>
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+
+<span class="token comment"># 可以用下面这个</span>
+kubectl apply -f   flannel-k8s-v1.16.2.yaml
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><blockquote><p>flannel-k8s-v1.16.2.yaml 文件内容:</p></blockquote> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> policy/v1beta1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> PodSecurityPolicy
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> psp.flannel.unprivileged
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+    <span class="token key atrule">seccomp.security.alpha.kubernetes.io/allowedProfileNames</span><span class="token punctuation">:</span> docker/default
+    <span class="token key atrule">seccomp.security.alpha.kubernetes.io/defaultProfileName</span><span class="token punctuation">:</span> docker/default
+    <span class="token key atrule">apparmor.security.beta.kubernetes.io/allowedProfileNames</span><span class="token punctuation">:</span> runtime/default
+    <span class="token key atrule">apparmor.security.beta.kubernetes.io/defaultProfileName</span><span class="token punctuation">:</span> runtime/default
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">privileged</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> configMap
+  <span class="token punctuation">-</span> secret
+  <span class="token punctuation">-</span> emptyDir
+  <span class="token punctuation">-</span> hostPath
+  <span class="token key atrule">allowedHostPaths</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">pathPrefix</span><span class="token punctuation">:</span> <span class="token string">&quot;/etc/cni/net.d&quot;</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">pathPrefix</span><span class="token punctuation">:</span> <span class="token string">&quot;/etc/kube-flannel&quot;</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">pathPrefix</span><span class="token punctuation">:</span> <span class="token string">&quot;/run/flannel&quot;</span>
+  <span class="token key atrule">readOnlyRootFilesystem</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token comment"># Users and groups</span>
+  <span class="token key atrule">runAsUser</span><span class="token punctuation">:</span>
+    <span class="token key atrule">rule</span><span class="token punctuation">:</span> RunAsAny
+  <span class="token key atrule">supplementalGroups</span><span class="token punctuation">:</span>
+    <span class="token key atrule">rule</span><span class="token punctuation">:</span> RunAsAny
+  <span class="token key atrule">fsGroup</span><span class="token punctuation">:</span>
+    <span class="token key atrule">rule</span><span class="token punctuation">:</span> RunAsAny
+  <span class="token comment"># Privilege Escalation</span>
+  <span class="token key atrule">allowPrivilegeEscalation</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">defaultAllowPrivilegeEscalation</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token comment"># Capabilities</span>
+  <span class="token key atrule">allowedCapabilities</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'NET_ADMIN'</span><span class="token punctuation">,</span> <span class="token string">'NET_RAW'</span><span class="token punctuation">]</span>
+  <span class="token key atrule">defaultAddCapabilities</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token key atrule">requiredDropCapabilities</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token comment"># Host namespaces</span>
+  <span class="token key atrule">hostPID</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">hostIPC</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">hostNetwork</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">hostPorts</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">min</span><span class="token punctuation">:</span> <span class="token number">0</span>
+    <span class="token key atrule">max</span><span class="token punctuation">:</span> <span class="token number">65535</span>
+  <span class="token comment"># SELinux</span>
+  <span class="token key atrule">seLinux</span><span class="token punctuation">:</span>
+    <span class="token comment"># SELinux is unused in CaaSP</span>
+    <span class="token key atrule">rule</span><span class="token punctuation">:</span> <span class="token string">'RunAsAny'</span>
+<span class="token punctuation">---</span>
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ClusterRole
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> rbac.authorization.k8s.io/v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> flannel
+<span class="token key atrule">rules</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'extensions'</span><span class="token punctuation">]</span>
+  <span class="token key atrule">resources</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'podsecuritypolicies'</span><span class="token punctuation">]</span>
+  <span class="token key atrule">verbs</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'use'</span><span class="token punctuation">]</span>
+  <span class="token key atrule">resourceNames</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'psp.flannel.unprivileged'</span><span class="token punctuation">]</span>
+<span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token string">&quot;&quot;</span>
+  <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> pods
+  <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> get
+<span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token string">&quot;&quot;</span>
+  <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> nodes
+  <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> list
+  <span class="token punctuation">-</span> watch
+<span class="token punctuation">-</span> <span class="token key atrule">apiGroups</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token string">&quot;&quot;</span>
+  <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> nodes/status
+  <span class="token key atrule">verbs</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> patch
+<span class="token punctuation">---</span>
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ClusterRoleBinding
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> rbac.authorization.k8s.io/v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> flannel
+<span class="token key atrule">roleRef</span><span class="token punctuation">:</span>
+  <span class="token key atrule">apiGroup</span><span class="token punctuation">:</span> rbac.authorization.k8s.io
+  <span class="token key atrule">kind</span><span class="token punctuation">:</span> ClusterRole
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> flannel
+<span class="token key atrule">subjects</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">kind</span><span class="token punctuation">:</span> ServiceAccount
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> flannel
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kube<span class="token punctuation">-</span>system
+<span class="token punctuation">---</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ServiceAccount
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> flannel
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kube<span class="token punctuation">-</span>system
+<span class="token punctuation">---</span>
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ConfigMap
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kube<span class="token punctuation">-</span>flannel<span class="token punctuation">-</span>cfg
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kube<span class="token punctuation">-</span>system
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">tier</span><span class="token punctuation">:</span> node
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> flannel
+<span class="token key atrule">data</span><span class="token punctuation">:</span>
+  <span class="token key atrule">cni-conf.json</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+    {
+      &quot;name&quot;: &quot;cbr0&quot;,
+      &quot;cniVersion&quot;: &quot;0.3.1&quot;,
+      &quot;plugins&quot;: [
+        {
+          &quot;type&quot;: &quot;flannel&quot;,
+          &quot;delegate&quot;: {
+            &quot;hairpinMode&quot;: true,
+            &quot;isDefaultGateway&quot;: true
+          }
+        },
+        {
+          &quot;type&quot;: &quot;portmap&quot;,
+          &quot;capabilities&quot;: {
+            &quot;portMappings&quot;: true
+          }
+        }
+      ]
+    }</span>
+  <span class="token key atrule">net-conf.json</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+    {
+      &quot;Network&quot;: &quot;10.244.0.0/16&quot;,
+      &quot;Backend&quot;: {
+        &quot;Type&quot;: &quot;vxlan&quot;
+      }
+    }</span>
+<span class="token punctuation">---</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> DaemonSet
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kube<span class="token punctuation">-</span>flannel<span class="token punctuation">-</span>ds
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> kube<span class="token punctuation">-</span>system
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">tier</span><span class="token punctuation">:</span> node
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> flannel
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+      <span class="token key atrule">app</span><span class="token punctuation">:</span> flannel
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">tier</span><span class="token punctuation">:</span> node
+        <span class="token key atrule">app</span><span class="token punctuation">:</span> flannel
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">affinity</span><span class="token punctuation">:</span>
+        <span class="token key atrule">nodeAffinity</span><span class="token punctuation">:</span>
+          <span class="token key atrule">requiredDuringSchedulingIgnoredDuringExecution</span><span class="token punctuation">:</span>
+            <span class="token key atrule">nodeSelectorTerms</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">matchExpressions</span><span class="token punctuation">:</span>
+              <span class="token punctuation">-</span> <span class="token key atrule">key</span><span class="token punctuation">:</span> kubernetes.io/os
+                <span class="token key atrule">operator</span><span class="token punctuation">:</span> In
+                <span class="token key atrule">values</span><span class="token punctuation">:</span>
+                <span class="token punctuation">-</span> linux
+      <span class="token key atrule">hostNetwork</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+      <span class="token key atrule">priorityClassName</span><span class="token punctuation">:</span> system<span class="token punctuation">-</span>node<span class="token punctuation">-</span>critical
+      <span class="token key atrule">tolerations</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">operator</span><span class="token punctuation">:</span> Exists
+        <span class="token key atrule">effect</span><span class="token punctuation">:</span> NoSchedule
+      <span class="token key atrule">serviceAccountName</span><span class="token punctuation">:</span> flannel
+      <span class="token key atrule">initContainers</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> install<span class="token punctuation">-</span>cni
+        <span class="token key atrule">image</span><span class="token punctuation">:</span> quay.io/coreos/flannel<span class="token punctuation">:</span>v0.13.0
+        <span class="token key atrule">command</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> cp
+        <span class="token key atrule">args</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token punctuation">-</span>f
+        <span class="token punctuation">-</span> /etc/kube<span class="token punctuation">-</span>flannel/cni<span class="token punctuation">-</span>conf.json
+        <span class="token punctuation">-</span> /etc/cni/net.d/10<span class="token punctuation">-</span>flannel.conflist
+        <span class="token key atrule">volumeMounts</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> cni
+          <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /etc/cni/net.d
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> flannel<span class="token punctuation">-</span>cfg
+          <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /etc/kube<span class="token punctuation">-</span>flannel/
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> kube<span class="token punctuation">-</span>flannel
+        <span class="token key atrule">image</span><span class="token punctuation">:</span> quay.io/coreos/flannel<span class="token punctuation">:</span>v0.13.0
+        <span class="token key atrule">command</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> /opt/bin/flanneld
+        <span class="token key atrule">args</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>ip<span class="token punctuation">-</span>masq
+        <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>kube<span class="token punctuation">-</span>subnet<span class="token punctuation">-</span>mgr
+        <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+          <span class="token key atrule">requests</span><span class="token punctuation">:</span>
+            <span class="token key atrule">cpu</span><span class="token punctuation">:</span> <span class="token string">&quot;100m&quot;</span>
+            <span class="token key atrule">memory</span><span class="token punctuation">:</span> <span class="token string">&quot;50Mi&quot;</span>
+          <span class="token key atrule">limits</span><span class="token punctuation">:</span>
+            <span class="token key atrule">cpu</span><span class="token punctuation">:</span> <span class="token string">&quot;100m&quot;</span>
+            <span class="token key atrule">memory</span><span class="token punctuation">:</span> <span class="token string">&quot;50Mi&quot;</span>
+        <span class="token key atrule">securityContext</span><span class="token punctuation">:</span>
+          <span class="token key atrule">privileged</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+          <span class="token key atrule">capabilities</span><span class="token punctuation">:</span>
+            <span class="token key atrule">add</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;NET_ADMIN&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;NET_RAW&quot;</span><span class="token punctuation">]</span>
+        <span class="token key atrule">env</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> POD_NAME
+          <span class="token key atrule">valueFrom</span><span class="token punctuation">:</span>
+            <span class="token key atrule">fieldRef</span><span class="token punctuation">:</span>
+              <span class="token key atrule">fieldPath</span><span class="token punctuation">:</span> metadata.name
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> POD_NAMESPACE
+          <span class="token key atrule">valueFrom</span><span class="token punctuation">:</span>
+            <span class="token key atrule">fieldRef</span><span class="token punctuation">:</span>
+              <span class="token key atrule">fieldPath</span><span class="token punctuation">:</span> metadata.namespace
+        <span class="token key atrule">volumeMounts</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> run
+          <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /run/flannel
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> flannel<span class="token punctuation">-</span>cfg
+          <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /etc/kube<span class="token punctuation">-</span>flannel/
+      <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> run
+        <span class="token key atrule">hostPath</span><span class="token punctuation">:</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> /run/flannel
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> cni
+        <span class="token key atrule">hostPath</span><span class="token punctuation">:</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> /etc/cni/net.d
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> flannel<span class="token punctuation">-</span>cfg
+        <span class="token key atrule">configMap</span><span class="token punctuation">:</span>
+          <span class="token key atrule">name</span><span class="token punctuation">:</span> kube<span class="token punctuation">-</span>flannel<span class="token punctuation">-</span>cfg
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br></div></div><p>第12步:在node节点上执行kubeadmin join xxxxxxxxxx</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 在第11步执行后,最后的日志里会打印如何将node节点加入k8s集群中;kubeadmin join xxxxxxxx</span>
+<span class="token comment"># 按照提示这一步完成后提示 把node节点加进去</span>
+
+<span class="token comment"># 此处为给node节点注册用</span>
+kubeadm <span class="token function">join</span> <span class="token number">192.168</span>.81.128:6443 --token 6htrdv.xpsc2r7ez9wmbeto <span class="token punctuation">\</span>
+    --discovery-token-ca-cert-hash sha256:ec39d74ca1dab2ce811e1d569cb0a71fc833342b8a97709b59b7ddf38dde3749
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 出于安全考虑，默认配置下Kubernetes不会将Pod调度到Master节点。如果希望将k8s-master也当作Node使用，可以执行如下命令：</span>
+
+kubectl taint <span class="token function">node</span> k8s-master-01 node-role.kubernetes.io/master-1
+<span class="token comment"># 其中k8s-master是主机节点hostname如果要恢复Master Only状态，执行如下命令：</span>
+
+kubectl taint <span class="token function">node</span> k8s-master-01 node-role.kubernetes.io/master<span class="token operator">=</span><span class="token string">&quot;&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h4 id="安装失败操作"><a href="#安装失败操作" class="header-anchor">#</a> 安装失败操作</h4> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code> kubeadm reset
+ 
+ <span class="token function">rm</span> -rf /var/lib/etcd /var/lib/kubelet /etc/cni/net.d /var/lib/dockershim /var/run/kubernetes /var/lib/cni
+ 
+ <span class="token function">rm</span> -rf <span class="token environment constant">$HOME</span>/.kube
+ 
+ <span class="token function">service</span> kubelet restart
+<span class="token comment"># master 重新初始化</span>
+ 
+<span class="token comment"># node 重新join</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="rancher-安装并导入-k8s-集群"><a href="#rancher-安装并导入-k8s-集群" class="header-anchor">#</a> rancher 安装并导入 k8s 集群</h2> <h3 id="rancher-安装"><a href="#rancher-安装" class="header-anchor">#</a> rancher 安装</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 指定版本安装 不指定:v2.4.8 则安装最新版本</span>
+<span class="token function">docker</span> pull rancher/rancher:v2.4.8
+
+<span class="token comment"># 启动</span>
+<span class="token function">docker</span> run --privileged -d --restart<span class="token operator">=</span>unless-stopped -p <span class="token number">80</span>:80 -p <span class="token number">443</span>:443 <span class="token punctuation">\</span>
+--name rancher -e <span class="token assign-left variable">JAVA_OPTS</span><span class="token operator">=</span><span class="token string">&quot;-Xmx1024m&quot;</span> rancher/rancher:v2.4.8
+
+<span class="token comment"># 浏览器访问 所安装地址主机</span>
+<span class="token comment"># 设置密码 rancher 用户名为 admin</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="导入k8s集群"><a href="#导入k8s集群" class="header-anchor">#</a> 导入k8s集群</h3> <h4 id="添加集群"><a href="#添加集群" class="header-anchor">#</a> 添加集群</h4> <ol><li><p>点击右上角添加集群</p></li> <li><p>点击导入</p></li> <li><p>输入集群名称 local-k8s</p></li> <li><p>点击创建</p></li> <li><p>在现有的受支持的 Kubernetes 集群上运行下面的 kubectl 命令，将其导入 Rancher: 复制命令</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>kubectl apply -f https://192.168.238.129/v3/import/kpp2p7dt26prj2r6876f54gr64z5457cgd55zjj9brspckhjc4jv4f.yaml
+<span class="token comment"># 如果报错 可以将https://192.168.238.129/v3/import/kpp2p7dt26prj2r6876f54gr64z5457cgd55zjj9brspckhjc4jv4f.yaml下载下来 </span>
+<span class="token comment"># 上传到服务器并且命名为 local-k8s.yaml 再重新执行命令即可：</span>
+kubectl apply -f local-k8s.yaml
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><p>如果由于您的 Rancher 安装使用不受信任/自签名的 SSL 证书而出现“由未知权限签名的证书”错误，请运行下面的命令以绕过证书检查:</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">curl</span> --insecure -sfL https://192.168.238.129/v3/import/kpp2p7dt26prj2r6876f54gr64z5457cgd55zjj9brspckhjc4jv4f.yaml <span class="token operator">|</span> kubectl apply -f -
+
+<span class="token comment"># 如果报错 可以将https://192.168.238.129/v3/import/kpp2p7dt26prj2r6876f54gr64z5457cgd55zjj9brspckhjc4jv4f.yaml下载下来 </span>
+<span class="token comment"># 上传到服务器并且命名为 local-k8s-sfl.yaml 再重新执行命令即可：</span>
+<span class="token function">curl</span> --insecure -sfL local-k8s-sfl.yaml <span class="token operator">|</span> kubectl apply -f -
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li></ol> <h3 id="部署服务"><a href="#部署服务" class="header-anchor">#</a> 部署服务</h3> <ol><li>选择集群 local-k8s 点击 default</li> <li>点击部署服务</li> <li>输入名称 例 nginx</li> <li>Docker 镜像 输入 nginx   （docker pull nginx）</li> <li>端口映射
+<ul><li>端口名称 80tcp</li> <li>容器端口 80</li> <li>协议 tcp</li> <li>网络模式 NodePort</li> <li>主机监听端口 30080</li></ul></li> <li>浏览器访问 nginx  ip:30080 则成功部署</li></ol> <h3 id="rancher-部署-jenkins"><a href="#rancher-部署-jenkins" class="header-anchor">#</a> rancher 部署 jenkins</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 在宿主机创建挂载文件夹</span>
+<span class="token function">mkdir</span> -p /water/runfile/docker_volume/jenkins_home
+
+<span class="token comment"># 在rancher的部署页中做如下操作</span>
+	<span class="token number">1</span>. 输入名称 jenkins
+	<span class="token number">2</span>. 输入镜像名称 jenkins/jenkins
+	<span class="token number">3</span>. 添加端口映射 <span class="token number">30000</span><span class="token punctuation">(</span>主机<span class="token punctuation">)</span>:8080<span class="token punctuation">(</span>容器<span class="token punctuation">)</span>和 <span class="token number">30001</span><span class="token punctuation">(</span>主机<span class="token punctuation">)</span>:50000<span class="token punctuation">(</span>容器<span class="token punctuation">)</span>
+	<span class="token number">4</span>. 添加一个路径映射卷，卷名为jenkins-home主机路径的话就是填入我们先前创建的/water/runfile/docker_volume/jenkins_home目录路径，选择为现有目录并映射到容器路径/var/jenkins_home目录路径
+		<span class="token number">4.0</span>.1后面maven的配置文件
+	<span class="token number">4.1</span> 因为要在jenkins下执行docker命令，所以再挂载两个宿主机的路径/var/run/docker.sock:/var/run/docker.sock /usr/bin/docker:/usr/bin/docker
+	<span class="token number">4.2</span> 因为jenkins里要执行docker命令，所以将用户设置为uid为0的<span class="token punctuation">(</span>表示使用root权限<span class="token punctuation">)</span>用户启动。点击高级选项，命令，用户uid填写0
+	<span class="token number">4.3</span> 环境变量设置 key <span class="token operator">=</span> JAVA_OPTS <span class="token punctuation">;</span> value <span class="token operator">=</span> -Dhudson.model.DownloadService.noSignatureCheck<span class="token operator">=</span>true -Duser.timezone<span class="token operator">=</span>Asia/Shanghai
+	<span class="token number">5</span>. 点击启动按钮
+
+<span class="token comment"># 这几个步骤其实反应到我们docker容器中就如同下面的命令：</span>
+<span class="token function">docker</span> run --privileged -d --restart unless-stopped --name jenkins <span class="token punctuation">\</span>
+    -u <span class="token number">0</span> -p <span class="token number">30000</span>:8080 -p <span class="token number">30001</span>:50000 <span class="token punctuation">\</span>
+    -v /water/runfile/docker_volume/jenkins_home:/var/jenkins_home <span class="token punctuation">\</span>
+    jenkins:2.60.3-alpine
+
+
+<span class="token comment"># 刷新等待，直到等到服务状态为Active后说明服务部署成功</span>
+
+<span class="token comment"># 你可以点击如下图中标红的连接http://192.168.232.140:30000/ 就是我们先前对8080映射到了主机30000端口</span>
+
+<span class="token comment"># 如果一直出启动中 按照网页中更改下载源</span>
+https://www.cnblogs.com/brady-wang/p/11732850.html
+https://www.cnblogs.com/gaozejie/p/15781379.html
+
+<span class="token comment"># 初始化Jenkins</span>
+<span class="token comment"># 到我们的主机映射目录去查看密码</span>
+<span class="token function">cat</span> /water/runfile/docker_volume/jenkins_home/secrets/initialAdminPassword
+
+<span class="token comment"># 当然也可以在rancher中操作选项里操作执行命令行，在这个里面操作命令就是基于容器内部文件路径了</span>
+
+
+<span class="token comment"># 选择&quot;按照系统建议的插件&quot;，一直等到插件安装完成，这可能需要几分钟时间</span>
+<span class="token comment"># 非常遗憾默认的插件里没有我们用到的maven，后面需要自己配置插件，</span>
+<span class="token comment"># 从这里我们也要思考一下以后在做项目中，能够考虑用Gradle来替代maven，这也许是一个流行趋势</span>
+
+<span class="token comment"># 创建用户设置密码</span>
+root
+root
+
+<span class="token comment"># 安装maven</span>
+<span class="token comment"># 在全局工具配置中安装maven， 选择一个合适的版本，勾选自动安装，之后直接保存，</span>
+<span class="token comment"># 需注意的是，现在jenkins并不会立即给你安装maven软件</span>
+
+<span class="token comment"># maven名字为：jenkins-in-maven</span>
+
+<span class="token comment"># 接下来我们在插件管理中查找maven插件，</span>
+<span class="token comment"># 可以在浏览器中使用ctrl+f快捷键来快速定位插件，</span>
+<span class="token comment"># 选择好maven integration插件，然后点击直接安装</span>
+
+<span class="token comment"># 创建一个maven项目进行一下构建，这里构建肯定会失败，因为没有指定仓库等信息</span>
+<span class="token comment"># 配置git地址， 命令clean package -Dmaven.test.skip=true</span>
+
+<span class="token comment"># 构建后会自动下载maven.zip</span>
+
+<span class="token comment"># 在正式构建项目代码前，需要配置maven的仓库等信息</span>
+<span class="token comment"># 在宿主机执行如下命令进入jenkins-in-maven目录(先前安装的默认目录) 并通过ls查看目录下清单列表</span>
+<span class="token comment"># cd /water/runfile/docker_volume/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/jenkins-in-maven</span>
+
+<span class="token comment"># 指定Repository目录和mirror等配置</span>
+<span class="token function">vi</span> conf/settings.xml
+<span class="token comment"># 在相应位置加入如下配置，并保存退出vi模式</span>
+
+<span class="token operator">&lt;</span>localRepository<span class="token operator">&gt;</span>
+/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/jenkins-in-maven/repository
+<span class="token operator">&lt;</span>/localRepository<span class="token operator">&gt;</span>
+
+<span class="token comment"># 与</span>
+
+<span class="token operator">&lt;</span>mirror<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>id<span class="token operator">&gt;</span>alimaven<span class="token operator">&lt;</span>/id<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>aliyun maven<span class="token operator">&lt;</span>/name<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>url<span class="token operator">&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="token operator">&lt;</span>/url<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>mirrorOf<span class="token operator">&gt;</span>central<span class="token operator">&lt;</span>/mirrorOf<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/mirror<span class="token operator">&gt;</span>
+
+<span class="token comment"># 在&lt;mirrors&gt;标签下</span>
+
+<span class="token comment"># 配置好后继续点击构建</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br></div></div><h3 id="rancher-部署-docker-镜像仓库"><a href="#rancher-部署-docker-镜像仓库" class="header-anchor">#</a> rancher 部署 docker 镜像仓库</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 搭建本地docker 镜像仓库</span>
+<span class="token function">docker</span> pull registry
+
+<span class="token comment"># 在每一台节点加入一下信息</span>
+<span class="token function">vi</span> /etc/docker/daemon.json 
+<span class="token punctuation">{</span>
+    <span class="token string">&quot;registry-mirrors&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span><span class="token string">&quot;http://86d2a50b.m.daocloud.io&quot;</span><span class="token punctuation">]</span>,
+    <span class="token string">&quot;insecure-registries&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span><span class="token string">&quot;192.168.238.129:5000&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span class="token comment"># 重启docker</span>
+systemctl  restart <span class="token function">docker</span>
+
+<span class="token comment"># 最后在 rancher中配置 registry</span>
+
+<span class="token number">1</span>、服务名 registry
+<span class="token number">2</span>、镜像名registry:latest
+<span class="token number">3</span>、端口 <span class="token number">5000</span> 选择 hostPord 主机端口 <span class="token number">5000</span>
+<span class="token number">4</span>. 映射卷路径 /water/runfile/docker_volume/registry:/var/lib/registry
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h3 id="dockerfile-文件编辑"><a href="#dockerfile-文件编辑" class="header-anchor">#</a> dockerfile 文件编辑</h3> <div class="language-dockerfile line-numbers-mode"><pre class="language-dockerfile"><code><span class="token comment"># 文件路径 java工程下 /src/main/docker/Dockerfile</span>
+<span class="token instruction"><span class="token keyword">FROM</span> openjdk:8</span>
+<span class="token instruction"><span class="token keyword">EXPOSE</span> 9999</span>
+<span class="token instruction"><span class="token keyword">VOLUME</span> /tmp</span>
+<span class="token instruction"><span class="token keyword">ADD</span> *.jar app.jar</span>
+<span class="token instruction"><span class="token keyword">RUN</span> sh -c <span class="token string">'touch /app.jar'</span></span>
+<span class="token instruction"><span class="token keyword">ENTRYPOINT</span> [ <span class="token string">&quot;sh&quot;</span>, <span class="token string">&quot;-c&quot;</span>, <span class="token string">&quot;java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar&quot;</span> ]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="jenkins-构建java应用"><a href="#jenkins-构建java应用" class="header-anchor">#</a> jenkins 构建Java应用</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 1. 创建maven项目 (可用流水线作业等 根据个人需求)</span>
+
+<span class="token comment"># 2. 输入名称 devpos</span>
+
+<span class="token comment"># 3. 源码管理 填写git</span>
+	<span class="token comment"># 3.1 Repository URL</span>
+		https://gitee.com/hq-study/devpos.git
+
+	<span class="token comment"># 3.2 添加凭据 </span>
+		username <span class="token operator">=</span> huang-qing -- password <span class="token operator">=</span> ******
+
+	<span class="token comment"># 3.3 指定分支 (根据个人仓库分支)</span>
+		*/master 
+
+<span class="token comment"># 4. Pre Steps add pre-build step 选择调用顶层Maven目标 </span>
+  <span class="token comment"># 4.1 Maven 版本 选择全局配置的maven版本：</span>
+ 	jenkins-in-maven
+  <span class="token comment"># 4.2 目标</span>
+   	clean package -Dmaven.test.skip<span class="token operator">=</span>true
+  <span class="token comment"># 4.2 继续 add pre-build step 选择 执行shell</span>
+  	<span class="token comment"># 此处如果你的仓库是远程仓库 则加上本地仓库无需添加 ↓</span>
+  	<span class="token comment"># docker login --username=******** --password ********</span>
+  	
+    <span class="token function">cp</span> <span class="token variable">${WORKSPACE}</span>/src/main/docker/Dockerfile <span class="token variable">${WORKSPACE}</span>/target
+    <span class="token builtin class-name">cd</span> <span class="token variable">${WORKSPACE}</span>/target
+    <span class="token function">docker</span> build <span class="token builtin class-name">.</span> -t devpos:v1.0
+    <span class="token function">docker</span> tag devpos:v1.0 <span class="token number">192.168</span>.238.129:5000/devpos:v1.0
+    <span class="token function">docker</span> push <span class="token number">192.168</span>.238.129:5000/devpos:v1.0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><h3 id="rancher-部署java项目"><a href="#rancher-部署java项目" class="header-anchor">#</a> rancher 部署java项目</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token number">1</span>、服务名 devpos
+<span class="token number">2</span>、镜像名 <span class="token number">192.168</span>.238.129:5000/devpos:v1.0
+<span class="token number">3</span>、端口 <span class="token number">8080</span> 选择 nodeport 主机端口 <span class="token number">30003</span>
+<span class="token number">4</span>、环境变量 <span class="token assign-left variable">key</span><span class="token operator">=</span>JAVA_OPTS <span class="token assign-left variable">value</span><span class="token operator">=</span>-Duser.timezone<span class="token operator">=</span>Asia/Shanghai
+<span class="token number">5</span>、启动后访问 部署主机IP:30003/devpos 成功返回信息则完成
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="jenkins-构建node-js应用"><a href="#jenkins-构建node-js应用" class="header-anchor">#</a> jenkins 构建node.js应用</h3> <ul><li><p>项目结构</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token operator">|</span><span class="token operator">--</span> docs
+<span class="token operator">|</span>   <span class="token operator">|</span><span class="token operator">--</span> README<span class="token punctuation">.</span>md
+<span class="token operator">|</span>   <span class="token operator">|</span><span class="token operator">--</span> all
+<span class="token operator">|</span>       <span class="token operator">|</span><span class="token operator">--</span> <span class="token class-name">Jvm</span><span class="token operator">-</span>指南<span class="token punctuation">.</span>md
+    <span class="token operator">|</span><span class="token operator">--</span> <span class="token punctuation">.</span>vuepress
+        <span class="token operator">|</span><span class="token operator">--</span> <span class="token keyword">public</span>
+    		<span class="token operator">|</span><span class="token operator">--</span> logo<span class="token punctuation">.</span>jpg
+        	<span class="token operator">|</span><span class="token operator">--</span> my<span class="token punctuation">.</span>jpg
+            <span class="token operator">|</span><span class="token operator">--</span> img
+            	<span class="token operator">|</span><span class="token operator">--</span> favicon<span class="token punctuation">.</span>ico
+        <span class="token operator">|</span><span class="token operator">--</span> config<span class="token punctuation">.</span>js
+<span class="token operator">|</span><span class="token operator">--</span> deploy<span class="token punctuation">.</span>sh
+<span class="token operator">|</span><span class="token operator">--</span> nginx<span class="token punctuation">.</span>conf
+<span class="token operator">|</span><span class="token operator">--</span> <span class="token keyword">package</span><span class="token operator">-</span>lock<span class="token punctuation">.</span>json
+<span class="token operator">|</span><span class="token operator">--</span> <span class="token keyword">package</span><span class="token punctuation">.</span>json
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div></li> <li><p><strong>dockerfile 文件编辑</strong></p> <div class="language-dockerfile line-numbers-mode"><pre class="language-dockerfile"><code><span class="token instruction"><span class="token keyword">FROM</span> nginx</span>
+<span class="token instruction"><span class="token keyword">RUN</span> mkdir /app</span>
+<span class="token instruction"><span class="token keyword">COPY</span> /docs/.vuepress/dist /app</span>
+<span class="token instruction"><span class="token keyword">COPY</span> nginx.conf /etc/nginx/nginx.conf</span>
+<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">&quot;nginx&quot;</span>, <span class="token string">&quot;-g&quot;</span>, <span class="token string">&quot;daemon off;&quot;</span>]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li> <li><p><strong>nginx.conf</strong></p> <div class="language-nginx line-numbers-mode"><pre class="language-nginx"><code><span class="token directive"><span class="token keyword">user</span>  nginx</span><span class="token punctuation">;</span>
+<span class="token directive"><span class="token keyword">worker_processes</span>  <span class="token number">1</span></span><span class="token punctuation">;</span>
+<span class="token directive"><span class="token keyword">error_log</span>  /var/log/nginx/error.log warn</span><span class="token punctuation">;</span>
+<span class="token directive"><span class="token keyword">pid</span>        /var/run/nginx.pid</span><span class="token punctuation">;</span>
+<span class="token directive"><span class="token keyword">events</span></span> <span class="token punctuation">{</span>
+  <span class="token directive"><span class="token keyword">worker_connections</span>  <span class="token number">1024</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token directive"><span class="token keyword">http</span></span> <span class="token punctuation">{</span>
+  <span class="token directive"><span class="token keyword">include</span>       /etc/nginx/mime.types</span><span class="token punctuation">;</span>
+  <span class="token directive"><span class="token keyword">default_type</span>  application/octet-stream</span><span class="token punctuation">;</span>
+  <span class="token directive"><span class="token keyword">log_format</span>  main  <span class="token string">'<span class="token variable">$remote_addr</span> - <span class="token variable">$remote_user</span> [<span class="token variable">$time_local]</span> &quot;<span class="token variable">$request</span>&quot; '</span>
+                    <span class="token string">'<span class="token variable">$status</span> <span class="token variable">$body_bytes_sent</span> &quot;<span class="token variable">$http_referer</span>&quot; '</span>
+                    <span class="token string">'&quot;<span class="token variable">$http_user_agent</span>&quot; &quot;<span class="token variable">$http_x_forwarded_for</span>&quot;'</span></span><span class="token punctuation">;</span>
+  <span class="token directive"><span class="token keyword">access_log</span>  /var/log/nginx/access.log  main</span><span class="token punctuation">;</span>
+  <span class="token directive"><span class="token keyword">sendfile</span>        <span class="token boolean">on</span></span><span class="token punctuation">;</span>
+  <span class="token directive"><span class="token keyword">keepalive_timeout</span>  <span class="token number">65</span></span><span class="token punctuation">;</span>
+  <span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span>
+    <span class="token directive"><span class="token keyword">listen</span>       <span class="token number">8090</span></span><span class="token punctuation">;</span>
+    <span class="token directive"><span class="token keyword">server_name</span>  localhost</span><span class="token punctuation">;</span>
+    <span class="token directive"><span class="token keyword">location</span> /</span> <span class="token punctuation">{</span>
+      <span class="token directive"><span class="token keyword">root</span>   /app</span><span class="token punctuation">;</span>
+      <span class="token directive"><span class="token keyword">index</span>  index.html</span><span class="token punctuation">;</span>
+      <span class="token directive"><span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ /index.html</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token directive"><span class="token keyword">error_page</span>   <span class="token number">500</span> <span class="token number">502</span> <span class="token number">503</span> <span class="token number">504</span>  /50x.html</span><span class="token punctuation">;</span>
+    <span class="token directive"><span class="token keyword">location</span> = /50x.html</span> <span class="token punctuation">{</span>
+      <span class="token directive"><span class="token keyword">root</span>   /usr/share/nginx/html</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div></li> <li><p><strong>操作步骤</strong></p></li></ul> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 安装 nodejs 插件</span>
+<span class="token comment"># 全局配置中 安装nodeJs 版本 名称nodeJs16.14.2 我这里使用的16.14.2</span>
+<span class="token comment"># 创建一个自由项目进行一下构建，在 构建环境 中 勾选 Provide Node &amp; npm bin/ folder to PATH 选择nodeJs16.14.2  其它默认 保存</span>
+<span class="token comment"># 点击构建后会自动下载 nodeJs16.14.2</span>
+
+
+<span class="token comment"># 1. 构建一个自由风格的软件项目 (可用流水线作业等 根据个人需求)</span>
+
+<span class="token comment"># 2. 输入名称 devpos</span>
+
+<span class="token comment"># 3. 源码管理 填写git</span>
+	<span class="token comment"># 3.1 Repository URL</span>
+		https://gitee.com/hq-study/blogs.git
+
+	<span class="token comment"># 3.2 添加凭据 </span>
+		username <span class="token operator">=</span> huang-qing -- password <span class="token operator">=</span> ******
+
+	<span class="token comment"># 3.3 指定分支 (根据个人仓库分支)</span>
+		*/master 
+<span class="token comment"># 4. 在 构建环境 中 勾选 Provide Node &amp; npm bin/ folder to PATH 选择nodeJs16.14.2  其它默认</span>
+<span class="token comment"># 5. add pre-build step 选择 执行shell</span>
+	 <span class="token function">npm</span> config <span class="token builtin class-name">set</span> <span class="token assign-left variable">sass_binary_site</span><span class="token operator">=</span>https://npm.taobao.org/mirrors/node-sass
+     <span class="token function">npm</span> <span class="token function">install</span> --registry<span class="token operator">=</span>https://registry.npm.taobao.org
+     <span class="token function">npm</span> run docs:build
+<span class="token comment"># 6. add pre-build step 选择 执行shell</span>
+  	<span class="token comment"># 此处如果你的仓库是远程仓库 则加上本地仓库无需添加 ↓</span>
+  	<span class="token comment"># docker login --username=******** --password ********</span>
+    <span class="token function">docker</span> build <span class="token builtin class-name">.</span> -t blogs:v1.0
+    <span class="token function">docker</span> tag blogs:v1.0 <span class="token number">192.168</span>.238.129:5000/blogs:v1.0
+    <span class="token function">docker</span> push <span class="token number">192.168</span>.238.129:5000/blogs:v1.0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><h3 id="rancher-部署node-js项目"><a href="#rancher-部署node-js项目" class="header-anchor">#</a> rancher 部署node.js项目</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token number">1</span>、服务名 blogs
+<span class="token number">2</span>、镜像名 <span class="token number">192.168</span>.238.129:5000/devpos:v1.0
+<span class="token number">3</span>、端口 <span class="token number">8090</span> 选择 nodeport 主机端口 <span class="token number">30004</span>
+<span class="token number">4</span>、启动后访问 部署主机IP:30004 显示页面 则表示成功
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></div></div>  <div class="page-edit"><div class="edit-link"><a href="https://github.com/h-qing/edit/master/docs/07.后端/03.DevOps/02.K8S-指南.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="tags"><a href="/tags/?tag=DevOps" title="标签">#DevOps</a><a href="/tags/?tag=%E6%B5%81%E6%B0%B4%E7%BA%BF" title="标签">#流水线</a></div> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/devops001/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">Docker-指南</div></a> <a href="/pages/linux001/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">Linux-指南</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/devops001/" class="prev">Docker-指南</a></span> <span class="next"><a href="/pages/linux001/">Linux-指南</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/ace3d3/"><div>
+            常用的后端轮子
+            <!----></div></a> <span class="date">04-16</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/mark001/"><div>
+            Markdown画图
+            <span class="title-tag">
+              原创
+            </span></div></a> <span class="date">4-15</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/java002/"><div>
+            Lambda&amp;Stream-API
+            <span class="title-tag">
+              原创
+            </span></div></a> <span class="date">4-15</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:hq.email@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/h-qing" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://gitee.com/huang-qing" title="Gitee" target="_blank" class="iconfont icon-gitee"></a><a href="https://music.163.com/" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2019-2022
+    <span>Rustic <!--| <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License--></a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.99f4e5a9.js" defer></script><script src="/assets/js/2.dc8d57d7.js" defer></script><script src="/assets/js/82.062ff1c0.js" defer></script>
+  </body>
+</html>
