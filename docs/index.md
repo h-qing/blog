@@ -9,7 +9,7 @@ tagline: 前后端技术博客，积跬步以至千里，致敬每个爱学习�
 
 features: # 可选的
   - title: 后端
-    details: Java、Jdk、Mysql、Spring框架等后端技术
+    details: Java、Mysql、Spring框架等后端技术
     link: /server/ # 可选
     imgUrl: /img/more.png # 可选
   - title: 前端

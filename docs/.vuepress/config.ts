@@ -14,7 +14,8 @@ const BASE='/';
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
   theme: 'vdoing', // 使用npm主题包
   // theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
-
+  title: 'Rustic blog',
+  description: '沉舟侧伴千帆过，病树前头万木春。',
   locales: {
     '/': {
       lang: 'zh-CN',
@@ -169,9 +170,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // repo: 'hq-study/blog', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
-    docsDir: 'docs', // 编辑的文件夹
-    editLinks: true, // 启用编辑
-    editLinkText: '编辑',
+    // docsDir: 'docs', // 编辑的文件夹
+    // editLinks: true, // 启用编辑
+    // editLinkText: '编辑',
 
     //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
 
@@ -181,9 +182,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // categoryText: '随笔', // 碎片化文章（_posts文件夹的文章）预设生成的分类值，默认'随笔'
 
     bodyBgImg: [
-      // '/img/bg.jpg',
-      BASE + 'img/bg.jpeg'
-      // '/img/bg1.jpg'
+      BASE + 'img/mybg2.jpg',
+      BASE + 'img/bg.jpg',
+      BASE + 'img/bg1.jpg',
+      BASE + 'img/bg.jpeg',
     ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时每隔15秒换一张。
     bodyBgImgOpacity: 1.0, // body背景图透明度，选值 0.1~ 1.0, 默认0.5
     // titleBadge: false, // 文章标题前的图标是否显示，默认true
@@ -243,7 +245,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       ],
     },
-
     // 页脚信息
     footer: {
       createYear: 2019, // 博客创建年份
@@ -288,6 +289,112 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
   // 插件配置
   plugins: <UserPlugins>[
+
+    [
+      "sakura",
+      {
+        num: 20,  // 默认数量
+        show: true, //  是否显示
+        zIndex: -1,   // 层级
+        img: {
+          replace: false,  // false 默认图 true 换图 需要填写httpUrl地址
+          httpUrl: '...'     // 绝对路径
+        }
+      }
+    ],
+    "@vuepress-reco/vuepress-plugin-loading-page",
+
+
+    [
+      "@vuepress-reco/vuepress-plugin-kan-ban-niang",
+      {
+        theme: ["wanko"],
+        clean: false,
+        messages: {
+          welcome: 'hello!',
+          home: 'm-m.....',
+          theme: 'v-v......',
+          close: '再见!'
+        }
+      }
+    ],
+/*     [
+      //彩带背景 先安装在配置， npm install vuepress-plugin-ribbon --save
+      "ribbon",
+      {
+        size: 90,     // width of the ribbon, default: 90
+        opacity: 0.8, // opacity of the ribbon, default: 0.3
+        zIndex: -1    // z-index property of the background, default: -1
+      }
+    ], */
+    [
+      "dynamic-title",
+      {
+        showIcon: "/favicon.ico",
+        showText: "(/≧▽≦/)咦！又好了！",
+        hideIcon: "/failure.ico",
+        hideText: "(●—●)喔哟，崩溃啦！",
+        recoverTime: 2000
+      },
+    ],
+
+    // [
+    //   'vuepress-plugin-helper-live2d', {
+    //     // 是否开启控制台日志打印(default: false)
+    //     log: true,
+    //     live2d: {
+    //       // 是否启用(关闭请设置为false)(default: true)
+    //       enable: true,
+    //       // 模型名称(default: hibiki)>>>取值请参考：
+    //       // https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki/live2d%E6%A8%A1%E5%9E%8B%E5%8C%85%E5%B1%95%E7%A4%BA
+    //       model: 'hibiki',
+    //       display: {
+    //         position: "right", // 显示位置：left/right(default: 'right')
+    //         width: 135, // 模型的长度(default: 135)
+    //         height: 300, // 模型的高度(default: 300)
+    //         hOffset: 65, //  水平偏移(default: 65)
+    //         vOffset: 0, //  垂直偏移(default: 0)
+    //       },
+    //       mobile: {
+    //         show: false // 是否在移动设备上显示(default: false)
+    //       },
+    //       react: {
+    //         opacity: 0.8 // 模型透明度(default: 0.8)
+    //       }
+    //     }
+    //   }
+    // ],
+    [
+      "cursor-effects",
+      {
+        size: 2,
+        shape: 'circle',  // 点击形状: 'star', 'star' | 'circle'
+        zIndex: 999999999
+      },
+    ],
+    [
+      'meting',
+      {
+        // 这个 API 是不可用的，只是作为示例而已
+        meting: {
+          auto: 'https://music.163.com/playlist?id=7382712855',
+          server: 'netease',
+          type: 'playlist',
+          mid: '7382712855',
+        }, // 不配置该项的话不会出现全局播放器
+        aplayer: {
+          lrcType: 3,
+          // 歌单为随机
+          order: 'random',
+          // 音量
+          volume: 0.3,
+          // 开启迷你模式
+          mini: true,
+          // 自动播放
+          autoplay: true
+        },
+      },
+    ],
     //
     // 'vuepress-plugin-baidu-autopush', // 百度自动推送
     //
@@ -380,6 +487,20 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     //     },
     //   },
     // ],
+    [
+      'vuepress-plugin-comment', // 评论
+      {
+        choosen: 'valine',
+        options: {
+          el: '#valine-vuepress-comment',
+          appId: 'sJaWDPfXywDYA9mHUIYgC4LC-gzGzoHsz', // your appId
+          appKey: '05e4AsjQJ0CldAFAPxQWRf8N', // your appKey
+          placeholder: '是时候展现真正的技术了',
+          avatar: 'wavatar',
+          serverUrl: 'https://sjawdpfx.lc-cn-n1-shared.com'
+        },
+      },
+    ],
     [
       '@vuepress/last-updated', // "上次更新"时间格式
       {
