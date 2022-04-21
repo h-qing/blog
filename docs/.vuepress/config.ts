@@ -182,9 +182,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // categoryText: '随笔', // 碎片化文章（_posts文件夹的文章）预设生成的分类值，默认'随笔'
 
     bodyBgImg: [
-      BASE + 'img/mybg2.jpg',
+      // BASE + 'img/mybg2.jpg',
       // BASE + 'img/bg.jpg',
-      // BASE + 'img/bg1.jpg',
+      BASE + 'img/bg1.jpg',
       // BASE + 'img/bg.jpeg',
     ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时每隔15秒换一张。
     bodyBgImgOpacity: 1.0, // body背景图透明度，选值 0.1~ 1.0, 默认0.5
