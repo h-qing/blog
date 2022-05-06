@@ -216,7 +216,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 博主信息 (显示在首页侧边栏)
     blogger: {
       // avatar: BASE + 'img/logo.png',
-      avatar: BASE + 'img/jpg.png',
+      avatar: BASE + 'img/logo.jpg',
       name: 'Rustic',
       slogan: '后端界的小学生',
     },
