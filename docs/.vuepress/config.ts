@@ -165,7 +165,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       { text: '关于', link: '/about/' },
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
-    logo: '/img/logo.png', // 导航栏logo
+    // logo: '/img/logo.png', // 导航栏logo
+    logo: '/img/logo.jpg', // 导航栏logo
     repo: 'h-qing', // 导航栏右侧生成Github链接
     // repo: 'hq-study/blog', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
@@ -214,7 +215,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 博主信息 (显示在首页侧边栏)
     blogger: {
-      avatar: BASE + 'img/logo.png',
+      // avatar: BASE + 'img/logo.png',
+      avatar: BASE + 'img/jpg.png',
       name: 'Rustic',
       slogan: '后端界的小学生',
     },
