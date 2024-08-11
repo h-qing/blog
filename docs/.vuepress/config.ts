@@ -377,29 +377,29 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         zIndex: 999999999
       },
     ],
-    [
-      'meting',
-      {
-        // 这个 API 是不可用的，只是作为示例而已
-        meting: {
-          auto: 'https://music.163.com/playlist?id=7382712855',
-          server: 'netease',
-          type: 'playlist',
-          mid: '7382712855',
-        }, // 不配置该项的话不会出现全局播放器
-        aplayer: {
-          lrcType: 3,
-          // 歌单为随机
-          order: 'random',
-          // 音量
-          volume: 0.3,
-          // 开启迷你模式
-          mini: true,
-          // 自动播放
-          autoplay: true
-        },
-      },
-    ],
+    // [
+    //   'meting',
+    //   {
+    //     // 这个 API 是不可用的，只是作为示例而已
+    //     meting: {
+    //       auto: 'https://music.163.com/playlist?id=7382712855',
+    //       server: 'netease',
+    //       type: 'playlist',
+    //       mid: '7382712855',
+    //     }, // 不配置该项的话不会出现全局播放器
+    //     aplayer: {
+    //       lrcType: 3,
+    //       // 歌单为随机
+    //       order: 'random',
+    //       // 音量
+    //       volume: 0.3,
+    //       // 开启迷你模式
+    //       mini: true,
+    //       // 自动播放
+    //       autoplay: true
+    //     },
+    //   },
+    // ],
 
     // 'vuepress-plugin-baidu-autopush', // 百度自动推送
     //
