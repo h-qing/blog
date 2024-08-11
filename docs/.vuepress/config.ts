@@ -144,6 +144,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         items: [
           { text: '学习', link: '/pages/f2a556/' },
           { text: '面试', link: '/pages/aea6571b7a8bae86/' },
+          { text: '简历', link: '/phone/jd_hq/' },
           {
             text: '收藏',
             link: '/pages/beb6c0bd8a66cea6/',
