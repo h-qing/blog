@@ -8,8 +8,8 @@ git add -A
 
 git commit -m 'add'
 
-git push origin master -f  https://gitee.com/hq-study/blog.git
-git push origin master -f  git@github.com:h-qing/blog.git
+git push  -f  https://gitee.com/hq-study/blog.git
+git push  -f  git@github.com:h-qing/blog.git
 
 
 sed -i "s#BASE='/'#BASE='/blog/'#g" docs/.vuepress/config.ts
