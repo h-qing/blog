@@ -310,19 +310,19 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     "@vuepress-reco/vuepress-plugin-loading-page",
 
 
-    [
-      "@vuepress-reco/vuepress-plugin-kan-ban-niang",
-      {
-        theme: ["wanko"],
-        clean: false,
-        messages: {
-          welcome: 'hello!',
-          home: 'm-m.....',
-          theme: 'v-v......',
-          close: '再见!'
-        }
-      }
-    ],
+    // [
+    //   "@vuepress-reco/vuepress-plugin-kan-ban-niang",
+    //   {
+    //     theme: ["wanko"],
+    //     clean: false,
+    //     messages: {
+    //       welcome: 'hello!',
+    //       home: 'm-m.....',
+    //       theme: 'v-v......',
+    //       close: '再见!'
+    //     }
+    //   }
+    // ],
     /*     [
           //彩带背景 先安装在配置， npm install vuepress-plugin-ribbon --save
           "ribbon",
