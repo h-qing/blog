@@ -1,15 +1,17 @@
 /**
- * 提示：如您想使用JS版本的配置文件可参考：https://github.com/xugaoyi/vuepress-theme-vdoing/tree/a2f03e993dd2f2a3afdc57cf72adfc6f1b6b0c32/docs/.vuepress
+ * 提示：如您想使用JS版本的配置文件可参考：https://github.com/h-qing/vuepress-theme-vdoing/tree/a2f03e993dd2f2a3afdc57cf72adfc6f1b6b0c32/docs/.vuepress
  */
 import { resolve } from 'path'
 import { defineConfig4CustomTheme, UserPlugins } from 'vuepress/config'
 import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types'
+// @ts-ignore
 import dayjs from 'dayjs'
 import baiduCode from './config/baiduCode' // 百度统计hm码
 import htmlModules from './config/htmlModules' // 自定义插入的html块
 
-const BASE='/';
+const BASE='/blog/';
 
+// @ts-ignore
 // @ts-ignore
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
   theme: 'vdoing', // 使用npm主题包
@@ -20,7 +22,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     '/': {
       lang: 'zh-CN',
       title: "Rustic blog",
-      description: 'huangqing的博客。',
+      description: 'h-qing的博客。',
     }
   },
   // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
@@ -163,6 +165,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         ],
       },
       { text: '关于', link: '/about/' },
+      { text: '简历', link: '/jd_hq/' }
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     // logo: '/img/logo.png', // 导航栏logo
@@ -175,7 +178,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // editLinks: true, // 启用编辑
     // editLinkText: '编辑',
 
-    //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
+    //*** 以下是Vdoing主题相关配置，文档：https://doc.h-qing.com/pages/a20ce8/ ***//
 
     // category: false, // 是否打开分类功能，默认true
     // tag: false, // 是否打开标签功能，默认true
@@ -185,7 +188,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     bodyBgImg: [
       // BASE + 'img/mybg2.jpg',
       // BASE + 'img/bg.jpg',
-      BASE + 'img/bg1.jpg',
+      BASE + 'img/bg.jpg',
       // BASE + 'img/bg.jpeg',
     ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时每隔15秒换一张。
     bodyBgImgOpacity: 1.0, // body背景图透明度，选值 0.1~ 1.0, 默认0.5
@@ -221,7 +224,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       slogan: '后端界的小学生',
     },
 
-    // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social)
+    // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.h-qing.com/pages/a20ce8/#social)
     social: {
       // iconfontCssFile: '//at.alicdn.com/t/xxx.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自己添加。阿里图片库：https://www.iconfont.cn/
       icons: [
@@ -251,7 +254,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     footer: {
       createYear: 2019, // 博客创建年份
       copyrightInfo:
-        'Rustic <!--| <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License--></a>', // 博客版权信息，支持a标签或换行标签</br>
+          'Rustic <!--| <a href="https://github.com/h-qing/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License--></a>', // 博客版权信息，支持a标签或换行标签</br>
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
@@ -320,15 +323,15 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         }
       }
     ],
-/*     [
-      //彩带背景 先安装在配置， npm install vuepress-plugin-ribbon --save
-      "ribbon",
-      {
-        size: 90,     // width of the ribbon, default: 90
-        opacity: 0.8, // opacity of the ribbon, default: 0.3
-        zIndex: -1    // z-index property of the background, default: -1
-      }
-    ], */
+    /*     [
+          //彩带背景 先安装在配置， npm install vuepress-plugin-ribbon --save
+          "ribbon",
+          {
+            size: 90,     // width of the ribbon, default: 90
+            opacity: 0.8, // opacity of the ribbon, default: 0.3
+            zIndex: -1    // z-index property of the background, default: -1
+          }
+        ], */
     [
       "dynamic-title",
       {
@@ -397,7 +400,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
-    //
+
     // 'vuepress-plugin-baidu-autopush', // 百度自动推送
     //
     // [
@@ -432,7 +435,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     //     },
     //     {
     //       title: '通过百度搜索本站的',
-    //       frontUrl: 'https://www.baidu.com/s?wd=site%3Axugaoyi.com%20',
+    //       frontUrl: 'https://www.baidu.com/s?wd=site%3Ah-qing.com%20',
     //     },
     //   ],
     // },
